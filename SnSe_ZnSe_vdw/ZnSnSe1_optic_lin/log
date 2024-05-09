@@ -1,0 +1,507 @@
+
+.Version 9.2.2 of OPTIC 
+.(MPI version, prepared for a x86_64_linux_gnu9.3 computer) 
+
+.Copyright (C) 1998-2020 ABINIT group . 
+ OPTIC comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ OPTIC has originally been developed by
+ Sangeeta Sharma and incorporated in ABINIT with the help of M. Verstraete.
+ Please refer to : 
+ S. Sharma, J. K. Dewhurst and C. Ambrosch-Draxl, Phys. Rev. B 67, 165332 (2003), and
+ S. Sharma and C. Ambrosch-Draxl, Physica Scripta T 109 (2004).
+- URLs and DOI at https://docs.abinit.org/theory/bibliography/#sharma2003
+- and https://docs.abinit.org/theory/bibliography/#sharma2004
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Sat 16 Mar 2024.
+- ( at 15h20 )
+  
+- The starting date is more than 3 years after the initial release
+- of this version of ABINIT, namely Nov 2020.
+- This version of ABINIT is not supported anymore.
+- Action: please, switch to a more recent version of ABINIT.
+ Please, give the name of the data file ...
+ The name of the data file is :
+ Cs2TiI6.in
+
+ Please, give the name of the output file ...
+ The name of the output file is :
+ Cs2TiI6.out
+
+ Please, give the root name for the (non)linear optical data output file ...
+ The root name of the output files is :
+ Cs2TiI6
+
+ Check the consistency of the wavefunction files (esp. k point and number of bands). 
+ Will compare, pairwise ( 1/2, 2/3, 3/4 ), the four following files :
+Cs2TiI6o_DS3_WFK
+Cs2TiI6o_DS4_1WF19
+Cs2TiI6o_DS5_1WF20
+Cs2TiI6o_DS6_1WF21
+
+================================================================================
+
+          - hdr_check: checking restart file header for consistency -
+
+
+          current calculation                           restart file
+          -------------------                           ------------
+
+  calculation expects a wf_planewave        |  input file contains a wf_planewave
+. ABINIT  code version 9.2.2                |  ABINIT  code version 9.2.2
+. date 20240316 bantot    24000 natom    6  |  date 20240316 bantot    24000 natom    6
+  nkpt     200 nsym  8 ngfft  36,  36, 128  |  nkpt     200 nsym  8 ngfft  36,  36, 128
+  ntypat  3 ecut_eff  22.5000000            |  ntypat  3 ecut_eff  22.5000000
+  usepaw  0                                 |  usepaw  0
+  usewvl  0                                 |  usewvl  0
+  rprimd:                                   |  rprimd:
+     7.7624317   0.0000000   0.0000000      |     7.7624317   0.0000000   0.0000000
+     0.0000000   7.7624317   0.0000000      |     0.0000000   7.7624317   0.0000000
+     0.0000000   0.0000000  29.1501816      |     0.0000000   0.0000000  29.1501816
+  nband:                                    |  nband:
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+=> stop printing nband after 100 values
+  symafm:                                   |  symafm:
+    1  1  1  1  1  1  1  1                  |    1  1  1  1  1  1  1  1
+  symrel:                                   |  symrel:
+    1  0  0  0  1  0  0  0  1               |    1  0  0  0  1  0  0  0  1
+    1  0  0  0 -1  0  0  0  1               |    1  0  0  0 -1  0  0  0  1
+   -1  0  0  0 -1  0  0  0  1               |   -1  0  0  0 -1  0  0  0  1
+   -1  0  0  0  1  0  0  0  1               |   -1  0  0  0  1  0  0  0  1
+    0  1  0  1  0  0  0  0  1               |    0  1  0  1  0  0  0  0  1
+    0  1  0 -1  0  0  0  0  1               |    0  1  0 -1  0  0  0  0  1
+    0 -1  0 -1  0  0  0  0  1               |    0 -1  0 -1  0  0  0  0  1
+    0 -1  0  1  0  0  0  0  1               |    0 -1  0  1  0  0  0  0  1
+  typat:                                    |  typat:
+    1  2  2  2  3  3                        |    1  2  2  2  3  3
+  so_psp  :                                 |  so_psp  :
+    1  1  1                                 |    1  1  1
+  istwfk:                                   |  istwfk:
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+=> stop printing istwfk after 100 values
+  kpt:                                      |  kpt:
+     0.0500000   0.0500000   0.1250000      |     0.0500000   0.0500000   0.1250000
+     0.1500000   0.0500000   0.1250000      |     0.1500000   0.0500000   0.1250000
+     0.2500000   0.0500000   0.1250000      |     0.2500000   0.0500000   0.1250000
+     0.3500000   0.0500000   0.1250000      |     0.3500000   0.0500000   0.1250000
+     0.4500000   0.0500000   0.1250000      |     0.4500000   0.0500000   0.1250000
+  wtk:                                      |  wtk:
+    0.005  0.005  0.005  0.005  0.005       |    0.005  0.005  0.005  0.005  0.005
+  occ:                                      |  occ:
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+  tnons:                                    |  tnons:
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+   znucl:                                   |   znucl:
+   50.00 34.00 30.00                        |       50.00 34.00 30.00
+  pseudopotential atom type  1:             |  pseudopotential atom type  1:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150810 pspcod    8 zion  14.0    |  pspdat   150810 pspcod    8 zion  14.0
+  pseudopotential atom type  2:             |  pseudopotential atom type  2:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150729 pspcod    8 zion  16.0    |  pspdat   150729 pspcod    8 zion  16.0
+  pseudopotential atom type  3:             |  pseudopotential atom type  3:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   161102 pspcod    8 zion  20.0    |  pspdat   161102 pspcod    8 zion  20.0
+  xred:                                     |  xred:
+     0.5000000   0.0000000   0.3025140      |     0.5000000   0.0000000   0.3025140
+     0.0000000   0.5000000   0.3045740      |     0.0000000   0.5000000   0.3045740
+     0.5000000   0.0000000   0.5036510      |     0.5000000   0.0000000   0.5036510
+     0.0000000   0.5000000   0.6974860      |     0.0000000   0.5000000   0.6974860
+     0.5000000   0.5000000   0.6005690      |     0.5000000   0.5000000   0.6005690
+     0.0000000   0.0000000   0.6005690      |     0.0000000   0.0000000   0.6005690
+ hdr_check:  Wavefunction file is OK for direct restart of calculation
+================================================================================
+
+================================================================================
+
+          - hdr_check: checking restart file header for consistency -
+
+
+          current calculation                           restart file
+          -------------------                           ------------
+
+  calculation expects a wf_planewave        |  input file contains a wf_planewave
+. ABINIT  code version 9.2.2                |  ABINIT  code version 9.2.2
+. date 20240316 bantot    24000 natom    6  |  date 20240316 bantot    24000 natom    6
+  nkpt     200 nsym  8 ngfft  36,  36, 128  |  nkpt     200 nsym  8 ngfft  36,  36, 128
+  ntypat  3 ecut_eff  22.5000000            |  ntypat  3 ecut_eff  22.5000000
+  usepaw  0                                 |  usepaw  0
+  usewvl  0                                 |  usewvl  0
+  rprimd:                                   |  rprimd:
+     7.7624317   0.0000000   0.0000000      |     7.7624317   0.0000000   0.0000000
+     0.0000000   7.7624317   0.0000000      |     0.0000000   7.7624317   0.0000000
+     0.0000000   0.0000000  29.1501816      |     0.0000000   0.0000000  29.1501816
+  nband:                                    |  nband:
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+   120 120 120 120 120 120 120 120 120      |   120 120 120 120 120 120 120 120 120
+=> stop printing nband after 100 values
+  symafm:                                   |  symafm:
+    1  1  1  1  1  1  1  1                  |    1  1  1  1  1  1  1  1
+  symrel:                                   |  symrel:
+    1  0  0  0  1  0  0  0  1               |    1  0  0  0  1  0  0  0  1
+    1  0  0  0 -1  0  0  0  1               |    1  0  0  0 -1  0  0  0  1
+   -1  0  0  0 -1  0  0  0  1               |   -1  0  0  0 -1  0  0  0  1
+   -1  0  0  0  1  0  0  0  1               |   -1  0  0  0  1  0  0  0  1
+    0  1  0  1  0  0  0  0  1               |    0  1  0  1  0  0  0  0  1
+    0  1  0 -1  0  0  0  0  1               |    0  1  0 -1  0  0  0  0  1
+    0 -1  0 -1  0  0  0  0  1               |    0 -1  0 -1  0  0  0  0  1
+    0 -1  0  1  0  0  0  0  1               |    0 -1  0  1  0  0  0  0  1
+  typat:                                    |  typat:
+    1  2  2  2  3  3                        |    1  2  2  2  3  3
+  so_psp  :                                 |  so_psp  :
+    1  1  1                                 |    1  1  1
+  istwfk:                                   |  istwfk:
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+=> stop printing istwfk after 100 values
+  kpt:                                      |  kpt:
+     0.0500000   0.0500000   0.1250000      |     0.0500000   0.0500000   0.1250000
+     0.1500000   0.0500000   0.1250000      |     0.1500000   0.0500000   0.1250000
+     0.2500000   0.0500000   0.1250000      |     0.2500000   0.0500000   0.1250000
+     0.3500000   0.0500000   0.1250000      |     0.3500000   0.0500000   0.1250000
+     0.4500000   0.0500000   0.1250000      |     0.4500000   0.0500000   0.1250000
+  wtk:                                      |  wtk:
+    0.005  0.005  0.005  0.005  0.005       |    0.005  0.005  0.005  0.005  0.005
+  occ:                                      |  occ:
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+  tnons:                                    |  tnons:
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+   znucl:                                   |   znucl:
+   50.00 34.00 30.00                        |       50.00 34.00 30.00
+  pseudopotential atom type  1:             |  pseudopotential atom type  1:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150810 pspcod    8 zion  14.0    |  pspdat   150810 pspcod    8 zion  14.0
+  pseudopotential atom type  2:             |  pseudopotential atom type  2:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150729 pspcod    8 zion  16.0    |  pspdat   150729 pspcod    8 zion  16.0
+  pseudopotential atom type  3:             |  pseudopotential atom type  3:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   161102 pspcod    8 zion  20.0    |  pspdat   161102 pspcod    8 zion  20.0
+  xred:                                     |  xred:
+     0.5000000   0.0000000   0.3025140      |     0.5000000   0.0000000   0.3025140
+     0.0000000   0.5000000   0.3045740      |     0.0000000   0.5000000   0.3045740
+     0.5000000   0.0000000   0.5036510      |     0.5000000   0.0000000   0.5036510
+     0.0000000   0.5000000   0.6974860      |     0.0000000   0.5000000   0.6974860
+     0.5000000   0.5000000   0.6005690      |     0.5000000   0.5000000   0.6005690
+     0.0000000   0.0000000   0.6005690      |     0.0000000   0.0000000   0.6005690
+ hdr_check:  Wavefunction file is OK for direct restart of calculation
+================================================================================
+
+ rprimd(bohr)      =   7.76243   0.00000   0.00000
+                       0.00000   7.76243   0.00000
+                       0.00000   0.00000  29.15018
+ natom             =       6
+ nkpt,mband        =     200     120
+ ecut              =  22.50000 Ha
+ Top of valence:   1.3123 (eV)
+ Bottom of conduction:   0.8101 (eV)
+ Fermi level: 1.0612  (eV) 
+
+ fermie            =   0.03900 Ha   1.06122 eV
+ Scissor shift     =   0.00000 Ha
+ Tolerance on closeness to singularities     =   0.00200 Ha
+ Smearing factor      =   0.00200 Ha
+ Will use the antiresonant approximation 
+ linear coeffs to be calculated : 
+ 22
+ non-linear coeffs to be calculated : 
+
+ electronic part of electro-optic coeffs to be calculated :
+
+ non-linear coeffs (V2) to be calculated :
+
+- Creating netcdf file WITHOUT MPI-IO support: Cs2TiI6_OPTIC.nc
+ optic : Call pmat2cart
+ No scissor shift to be applied. Returning to main optic routine.
+ optic : Call linopt
+  linopt            2           2
+ P-           0 :            1 of         200
+ P-           0 :            2 of         200
+ P-           0 :            3 of         200
+ P-           0 :            4 of         200
+ P-           0 :            5 of         200
+ P-           0 :            6 of         200
+ P-           0 :            7 of         200
+ P-           0 :            8 of         200
+ P-           0 :            9 of         200
+ P-           0 :           10 of         200
+ P-           0 :           11 of         200
+ P-           0 :           12 of         200
+ P-           0 :           13 of         200
+ P-           0 :           14 of         200
+ P-           0 :           15 of         200
+ P-           0 :           16 of         200
+ P-           0 :           17 of         200
+ P-           0 :           18 of         200
+ P-           0 :           19 of         200
+ P-           0 :           20 of         200
+ P-           0 :           21 of         200
+ P-           0 :           22 of         200
+ P-           0 :           23 of         200
+ P-           0 :           24 of         200
+ P-           0 :           25 of         200
+ P-           0 :           26 of         200
+ P-           0 :           27 of         200
+ P-           0 :           28 of         200
+ P-           0 :           29 of         200
+ P-           0 :           30 of         200
+ P-           0 :           31 of         200
+ P-           0 :           32 of         200
+ P-           0 :           33 of         200
+ P-           0 :           34 of         200
+ P-           0 :           35 of         200
+ P-           0 :           36 of         200
+ P-           0 :           37 of         200
+ P-           0 :           38 of         200
+ P-           0 :           39 of         200
+ P-           0 :           40 of         200
+ P-           0 :           41 of         200
+ P-           0 :           42 of         200
+ P-           0 :           43 of         200
+ P-           0 :           44 of         200
+ P-           0 :           45 of         200
+ P-           0 :           46 of         200
+ P-           0 :           47 of         200
+ P-           0 :           48 of         200
+ P-           0 :           49 of         200
+ P-           0 :           50 of         200
+ P-           0 :           51 of         200
+ P-           0 :           52 of         200
+ P-           0 :           53 of         200
+ P-           0 :           54 of         200
+ P-           0 :           55 of         200
+ P-           0 :           56 of         200
+ P-           0 :           57 of         200
+ P-           0 :           58 of         200
+ P-           0 :           59 of         200
+ P-           0 :           60 of         200
+ P-           0 :           61 of         200
+ P-           0 :           62 of         200
+ P-           0 :           63 of         200
+ P-           0 :           64 of         200
+ P-           0 :           65 of         200
+ P-           0 :           66 of         200
+ P-           0 :           67 of         200
+ P-           0 :           68 of         200
+ P-           0 :           69 of         200
+ P-           0 :           70 of         200
+ P-           0 :           71 of         200
+ P-           0 :           72 of         200
+ P-           0 :           73 of         200
+ P-           0 :           74 of         200
+ P-           0 :           75 of         200
+ P-           0 :           76 of         200
+ P-           0 :           77 of         200
+ P-           0 :           78 of         200
+ P-           0 :           79 of         200
+ P-           0 :           80 of         200
+ P-           0 :           81 of         200
+ P-           0 :           82 of         200
+ P-           0 :           83 of         200
+ P-           0 :           84 of         200
+ P-           0 :           85 of         200
+ P-           0 :           86 of         200
+ P-           0 :           87 of         200
+ P-           0 :           88 of         200
+ P-           0 :           89 of         200
+ P-           0 :           90 of         200
+ P-           0 :           91 of         200
+ P-           0 :           92 of         200
+ P-           0 :           93 of         200
+ P-           0 :           94 of         200
+ P-           0 :           95 of         200
+ P-           0 :           96 of         200
+ P-           0 :           97 of         200
+ P-           0 :           98 of         200
+ P-           0 :           99 of         200
+ P-           0 :          100 of         200
+ P-           0 :          101 of         200
+ P-           0 :          102 of         200
+ P-           0 :          103 of         200
+ P-           0 :          104 of         200
+ P-           0 :          105 of         200
+ P-           0 :          106 of         200
+ P-           0 :          107 of         200
+ P-           0 :          108 of         200
+ P-           0 :          109 of         200
+ P-           0 :          110 of         200
+ P-           0 :          111 of         200
+ P-           0 :          112 of         200
+ P-           0 :          113 of         200
+ P-           0 :          114 of         200
+ P-           0 :          115 of         200
+ P-           0 :          116 of         200
+ P-           0 :          117 of         200
+ P-           0 :          118 of         200
+ P-           0 :          119 of         200
+ P-           0 :          120 of         200
+ P-           0 :          121 of         200
+ P-           0 :          122 of         200
+ P-           0 :          123 of         200
+ P-           0 :          124 of         200
+ P-           0 :          125 of         200
+ P-           0 :          126 of         200
+ P-           0 :          127 of         200
+ P-           0 :          128 of         200
+ P-           0 :          129 of         200
+ P-           0 :          130 of         200
+ P-           0 :          131 of         200
+ P-           0 :          132 of         200
+ P-           0 :          133 of         200
+ P-           0 :          134 of         200
+ P-           0 :          135 of         200
+ P-           0 :          136 of         200
+ P-           0 :          137 of         200
+ P-           0 :          138 of         200
+ P-           0 :          139 of         200
+ P-           0 :          140 of         200
+ P-           0 :          141 of         200
+ P-           0 :          142 of         200
+ P-           0 :          143 of         200
+ P-           0 :          144 of         200
+ P-           0 :          145 of         200
+ P-           0 :          146 of         200
+ P-           0 :          147 of         200
+ P-           0 :          148 of         200
+ P-           0 :          149 of         200
+ P-           0 :          150 of         200
+ P-           0 :          151 of         200
+ P-           0 :          152 of         200
+ P-           0 :          153 of         200
+ P-           0 :          154 of         200
+ P-           0 :          155 of         200
+ P-           0 :          156 of         200
+ P-           0 :          157 of         200
+ P-           0 :          158 of         200
+ P-           0 :          159 of         200
+ P-           0 :          160 of         200
+ P-           0 :          161 of         200
+ P-           0 :          162 of         200
+ P-           0 :          163 of         200
+ P-           0 :          164 of         200
+ P-           0 :          165 of         200
+ P-           0 :          166 of         200
+ P-           0 :          167 of         200
+ P-           0 :          168 of         200
+ P-           0 :          169 of         200
+ P-           0 :          170 of         200
+ P-           0 :          171 of         200
+ P-           0 :          172 of         200
+ P-           0 :          173 of         200
+ P-           0 :          174 of         200
+ P-           0 :          175 of         200
+ P-           0 :          176 of         200
+ P-           0 :          177 of         200
+ P-           0 :          178 of         200
+ P-           0 :          179 of         200
+ P-           0 :          180 of         200
+ P-           0 :          181 of         200
+ P-           0 :          182 of         200
+ P-           0 :          183 of         200
+ P-           0 :          184 of         200
+ P-           0 :          185 of         200
+ P-           0 :          186 of         200
+ P-           0 :          187 of         200
+ P-           0 :          188 of         200
+ P-           0 :          189 of         200
+ P-           0 :          190 of         200
+ P-           0 :          191 of         200
+ P-           0 :          192 of         200
+ P-           0 :          193 of         200
+ P-           0 :          194 of         200
+ P-           0 :          195 of         200
+ P-           0 :          196 of         200
+ P-           0 :          197 of         200
+ P-           0 :          198 of         200
+ P-           0 :          199 of         200
+ P-           0 :          200 of         200
+ calculated the component:           2           2   of dielectric function
+  with broadening:         (0.0000000000000000,2.00000000000000004E-003)
+ and scissors shift:   0.0000000000000000     
+ energy window:   155.46418092346042      eV   5.7132037809703542      Ha
+ optic : Call nlinopt
+ optic : Call linelop
+ optic : Call nonlinopt
+
+================================================================================
+
+ Calculation completed.
+-
+- Proc.   0 individual time (sec): cpu=        235.9  wall=        237.7
+--- !FinalSummary
+program: optic
+version: 9.2.2
+start_datetime: Sat Mar 16 15:20:20 2024
+end_datetime: Sat Mar 16 15:24:18 2024
+overall_cpu_time:         235.9
+overall_wall_time:         237.7
+mpi_procs: 1
+omp_threads: 1
+...

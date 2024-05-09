@@ -1,0 +1,307 @@
+
+.Version 9.2.2 of OPTIC 
+.(MPI version, prepared for a x86_64_linux_gnu9.3 computer) 
+
+.Copyright (C) 1998-2020 ABINIT group . 
+ OPTIC comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ OPTIC has originally been developed by
+ Sangeeta Sharma and incorporated in ABINIT with the help of M. Verstraete.
+ Please refer to : 
+ S. Sharma, J. K. Dewhurst and C. Ambrosch-Draxl, Phys. Rev. B 67, 165332 (2003), and
+ S. Sharma and C. Ambrosch-Draxl, Physica Scripta T 109 (2004).
+- URLs and DOI at https://docs.abinit.org/theory/bibliography/#sharma2003
+- and https://docs.abinit.org/theory/bibliography/#sharma2004
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Fri  1 Mar 2024.
+- ( at 19h14 )
+  
+- The starting date is more than 3 years after the initial release
+- of this version of ABINIT, namely Nov 2020.
+- This version of ABINIT is not supported anymore.
+- Action: please, switch to a more recent version of ABINIT.
+ Please, give the name of the data file ...
+ The name of the data file is :
+ Cs2TiI6.in
+
+ Please, give the name of the output file ...
+ The name of the output file is :
+ Cs2TiI6.out
+
+ Please, give the root name for the (non)linear optical data output file ...
+ The root name of the output files is :
+ Cs2TiI6
+
+ Check the consistency of the wavefunction files (esp. k point and number of bands). 
+ Will compare, pairwise ( 1/2, 2/3, 3/4 ), the four following files :
+Cs2TiI6o_DS3_WFK
+Cs2TiI6o_DS4_1WF55
+Cs2TiI6o_DS5_1WF56
+Cs2TiI6o_DS6_1WF57
+
+================================================================================
+
+          - hdr_check: checking restart file header for consistency -
+
+
+          current calculation                           restart file
+          -------------------                           ------------
+
+  calculation expects a wf_planewave        |  input file contains a wf_planewave
+. ABINIT  code version 9.2.2                |  ABINIT  code version 9.2.2
+. date 20240301 bantot     5400 natom   18  |  date 20240301 bantot     5400 natom   18
+  nkpt      18 nsym  8 ngfft  36,  36, 256  |  nkpt      18 nsym  8 ngfft  36,  36, 256
+  ntypat  2 ecut_eff  22.5000000            |  ntypat  2 ecut_eff  22.5000000
+  usepaw  0                                 |  usepaw  0
+  usewvl  0                                 |  usewvl  0
+  rprimd:                                   |  rprimd:
+     7.7624317   0.0000000   0.0000000      |     7.7624317   0.0000000   0.0000000
+     0.0000000   7.7624317   0.0000000      |     0.0000000   7.7624317   0.0000000
+     0.0000000   0.0000000  58.7848720      |     0.0000000   0.0000000  58.7848720
+  nband:                                    |  nband:
+   300 300 300 300 300 300 300 300 300      |   300 300 300 300 300 300 300 300 300
+   300 300 300 300 300 300 300 300 300      |   300 300 300 300 300 300 300 300 300
+  symafm:                                   |  symafm:
+    1  1  1  1  1  1  1  1                  |    1  1  1  1  1  1  1  1
+  symrel:                                   |  symrel:
+    1  0  0  0  1  0  0  0  1               |    1  0  0  0  1  0  0  0  1
+    1  0  0  0 -1  0  0  0  1               |    1  0  0  0 -1  0  0  0  1
+   -1  0  0  0 -1  0  0  0  1               |   -1  0  0  0 -1  0  0  0  1
+   -1  0  0  0  1  0  0  0  1               |   -1  0  0  0  1  0  0  0  1
+    0  1  0  1  0  0  0  0  1               |    0  1  0  1  0  0  0  0  1
+    0  1  0 -1  0  0  0  0  1               |    0  1  0 -1  0  0  0  0  1
+    0 -1  0 -1  0  0  0  0  1               |    0 -1  0 -1  0  0  0  0  1
+    0 -1  0  1  0  0  0  0  1               |    0 -1  0  1  0  0  0  0  1
+  typat:                                    |  typat:
+    1  1  1  1  1  1  1  1  1  2  2  2      |    1  1  1  1  1  1  1  1  1  2  2  2
+    2  2  2  2  2  2                        |    2  2  2  2  2  2
+  so_psp  :                                 |  so_psp  :
+    1  1                                    |    1  1
+  istwfk:                                   |  istwfk:
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1                        |    1  1  1  1  1  1
+  kpt:                                      |  kpt:
+     0.0833333   0.0833333   0.5000000      |     0.0833333   0.0833333   0.5000000
+     0.2500000   0.0833333   0.5000000      |     0.2500000   0.0833333   0.5000000
+     0.4166667   0.0833333   0.5000000      |     0.4166667   0.0833333   0.5000000
+    -0.4166667   0.0833333   0.5000000      |    -0.4166667   0.0833333   0.5000000
+    -0.2500000   0.0833333   0.5000000      |    -0.2500000   0.0833333   0.5000000
+  wtk:                                      |  wtk:
+    0.056  0.056  0.056  0.056  0.056       |    0.056  0.056  0.056  0.056  0.056
+  occ:                                      |  occ:
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+  tnons:                                    |  tnons:
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+    -0.0000000   0.0000000   0.0000000      |    -0.0000000   0.0000000   0.0000000
+    -0.0000000   0.0000000   0.0000000      |    -0.0000000   0.0000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+   znucl:                                   |   znucl:
+   50.00 34.00                              |       50.00 34.00
+  pseudopotential atom type  1:             |  pseudopotential atom type  1:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150810 pspcod    8 zion  14.0    |  pspdat   150810 pspcod    8 zion  14.0
+  pseudopotential atom type  2:             |  pseudopotential atom type  2:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150729 pspcod    8 zion  16.0    |  pspdat   150729 pspcod    8 zion  16.0
+  xred:                                     |  xred:
+     0.5000000   0.0000000   0.1500100      |     0.5000000   0.0000000   0.1500100
+     0.0000000   0.5000000   0.2384010      |     0.0000000   0.5000000   0.2384010
+     0.5000000   0.0000000   0.3247500      |     0.5000000   0.0000000   0.3247500
+     0.0000000   0.5000000   0.4131410      |     0.0000000   0.5000000   0.4131410
+     0.5000000   0.0000000   0.4994890      |     0.5000000   0.0000000   0.4994890
+     0.0000000   0.5000000   0.5878800      |     0.0000000   0.5000000   0.5878800
+     0.5000000   0.0000000   0.6742290      |     0.5000000   0.0000000   0.6742290
+     0.0000000   0.5000000   0.7626200      |     0.0000000   0.5000000   0.7626200
+     0.5000000   0.0000000   0.8489680      |     0.5000000   0.0000000   0.8489680
+     0.0000000   0.5000000   0.1510320      |     0.0000000   0.5000000   0.1510320
+     0.5000000   0.0000000   0.2373800      |     0.5000000   0.0000000   0.2373800
+     0.0000000   0.5000000   0.3257710      |     0.0000000   0.5000000   0.3257710
+     0.5000000   0.0000000   0.4121200      |     0.5000000   0.0000000   0.4121200
+     0.0000000   0.5000000   0.5005110      |     0.0000000   0.5000000   0.5005110
+     0.5000000   0.0000000   0.5868590      |     0.5000000   0.0000000   0.5868590
+     0.0000000   0.5000000   0.6752500      |     0.0000000   0.5000000   0.6752500
+     0.5000000   0.0000000   0.7615990      |     0.5000000   0.0000000   0.7615990
+     0.0000000   0.5000000   0.8499900      |     0.0000000   0.5000000   0.8499900
+ hdr_check:  Wavefunction file is OK for direct restart of calculation
+================================================================================
+
+================================================================================
+
+          - hdr_check: checking restart file header for consistency -
+
+
+          current calculation                           restart file
+          -------------------                           ------------
+
+  calculation expects a wf_planewave        |  input file contains a wf_planewave
+. ABINIT  code version 9.2.2                |  ABINIT  code version 9.2.2
+. date 20240301 bantot     5400 natom   18  |  date 20240301 bantot     5400 natom   18
+  nkpt      18 nsym  8 ngfft  36,  36, 256  |  nkpt      18 nsym  8 ngfft  36,  36, 256
+  ntypat  2 ecut_eff  22.5000000            |  ntypat  2 ecut_eff  22.5000000
+  usepaw  0                                 |  usepaw  0
+  usewvl  0                                 |  usewvl  0
+  rprimd:                                   |  rprimd:
+     7.7624317   0.0000000   0.0000000      |     7.7624317   0.0000000   0.0000000
+     0.0000000   7.7624317   0.0000000      |     0.0000000   7.7624317   0.0000000
+     0.0000000   0.0000000  58.7848720      |     0.0000000   0.0000000  58.7848720
+  nband:                                    |  nband:
+   300 300 300 300 300 300 300 300 300      |   300 300 300 300 300 300 300 300 300
+   300 300 300 300 300 300 300 300 300      |   300 300 300 300 300 300 300 300 300
+  symafm:                                   |  symafm:
+    1  1  1  1  1  1  1  1                  |    1  1  1  1  1  1  1  1
+  symrel:                                   |  symrel:
+    1  0  0  0  1  0  0  0  1               |    1  0  0  0  1  0  0  0  1
+    1  0  0  0 -1  0  0  0  1               |    1  0  0  0 -1  0  0  0  1
+   -1  0  0  0 -1  0  0  0  1               |   -1  0  0  0 -1  0  0  0  1
+   -1  0  0  0  1  0  0  0  1               |   -1  0  0  0  1  0  0  0  1
+    0  1  0  1  0  0  0  0  1               |    0  1  0  1  0  0  0  0  1
+    0  1  0 -1  0  0  0  0  1               |    0  1  0 -1  0  0  0  0  1
+    0 -1  0 -1  0  0  0  0  1               |    0 -1  0 -1  0  0  0  0  1
+    0 -1  0  1  0  0  0  0  1               |    0 -1  0  1  0  0  0  0  1
+  typat:                                    |  typat:
+    1  1  1  1  1  1  1  1  1  2  2  2      |    1  1  1  1  1  1  1  1  1  2  2  2
+    2  2  2  2  2  2                        |    2  2  2  2  2  2
+  so_psp  :                                 |  so_psp  :
+    1  1                                    |    1  1
+  istwfk:                                   |  istwfk:
+    1  1  1  1  1  1  1  1  1  1  1  1      |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1                        |    1  1  1  1  1  1
+  kpt:                                      |  kpt:
+     0.0833333   0.0833333   0.5000000      |     0.0833333   0.0833333   0.5000000
+     0.2500000   0.0833333   0.5000000      |     0.2500000   0.0833333   0.5000000
+     0.4166667   0.0833333   0.5000000      |     0.4166667   0.0833333   0.5000000
+    -0.4166667   0.0833333   0.5000000      |    -0.4166667   0.0833333   0.5000000
+    -0.2500000   0.0833333   0.5000000      |    -0.2500000   0.0833333   0.5000000
+  wtk:                                      |  wtk:
+    0.056  0.056  0.056  0.056  0.056       |    0.056  0.056  0.056  0.056  0.056
+  occ:                                      |  occ:
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0      |   2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0
+  tnons:                                    |  tnons:
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000      |     0.0000000   0.0000000   0.0000000
+    -0.0000000   0.0000000   0.0000000      |    -0.0000000   0.0000000   0.0000000
+    -0.0000000   0.0000000   0.0000000      |    -0.0000000   0.0000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+     0.5000000   0.5000000   0.0000000      |     0.5000000   0.5000000   0.0000000
+   znucl:                                   |   znucl:
+   50.00 34.00                              |       50.00 34.00
+  pseudopotential atom type  1:             |  pseudopotential atom type  1:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150810 pspcod    8 zion  14.0    |  pspdat   150810 pspcod    8 zion  14.0
+  pseudopotential atom type  2:             |  pseudopotential atom type  2:
+  pspso   0 pspxc  11                       |  pspso   0 pspxc  11
+  pspdat   150729 pspcod    8 zion  16.0    |  pspdat   150729 pspcod    8 zion  16.0
+  xred:                                     |  xred:
+     0.5000000   0.0000000   0.1500100      |     0.5000000   0.0000000   0.1500100
+     0.0000000   0.5000000   0.2384010      |     0.0000000   0.5000000   0.2384010
+     0.5000000   0.0000000   0.3247500      |     0.5000000   0.0000000   0.3247500
+     0.0000000   0.5000000   0.4131410      |     0.0000000   0.5000000   0.4131410
+     0.5000000   0.0000000   0.4994890      |     0.5000000   0.0000000   0.4994890
+     0.0000000   0.5000000   0.5878800      |     0.0000000   0.5000000   0.5878800
+     0.5000000   0.0000000   0.6742290      |     0.5000000   0.0000000   0.6742290
+     0.0000000   0.5000000   0.7626200      |     0.0000000   0.5000000   0.7626200
+     0.5000000   0.0000000   0.8489680      |     0.5000000   0.0000000   0.8489680
+     0.0000000   0.5000000   0.1510320      |     0.0000000   0.5000000   0.1510320
+     0.5000000   0.0000000   0.2373800      |     0.5000000   0.0000000   0.2373800
+     0.0000000   0.5000000   0.3257710      |     0.0000000   0.5000000   0.3257710
+     0.5000000   0.0000000   0.4121200      |     0.5000000   0.0000000   0.4121200
+     0.0000000   0.5000000   0.5005110      |     0.0000000   0.5000000   0.5005110
+     0.5000000   0.0000000   0.5868590      |     0.5000000   0.0000000   0.5868590
+     0.0000000   0.5000000   0.6752500      |     0.0000000   0.5000000   0.6752500
+     0.5000000   0.0000000   0.7615990      |     0.5000000   0.0000000   0.7615990
+     0.0000000   0.5000000   0.8499900      |     0.0000000   0.5000000   0.8499900
+ hdr_check:  Wavefunction file is OK for direct restart of calculation
+================================================================================
+
+ rprimd(bohr)      =   7.76243   0.00000   0.00000
+                       0.00000   7.76243   0.00000
+                       0.00000   0.00000  58.78487
+ natom             =      18
+ nkpt,mband        =      18     300
+ ecut              =  22.50000 Ha
+ Top of valence:   4.6648 (eV)
+ Bottom of conduction:   4.7551 (eV)
+ Fermi level: 4.7099  (eV) 
+
+ fermie            =   0.17309 Ha   4.70995 eV
+ Scissor shift     =   0.00000 Ha
+ Tolerance on closeness to singularities     =   0.00200 Ha
+ Smearing factor      =   0.00200 Ha
+ Will use the antiresonant approximation 
+ linear coeffs to be calculated : 
+ 22
+ non-linear coeffs to be calculated : 
+
+ electronic part of electro-optic coeffs to be calculated :
+
+ non-linear coeffs (V2) to be calculated :
+
+- Creating netcdf file WITHOUT MPI-IO support: Cs2TiI6_OPTIC.nc
+ optic : Call pmat2cart
+ No scissor shift to be applied. Returning to main optic routine.
+ optic : Call linopt
+  linopt            2           2
+ P-           0 :            1 of          18
+ P-           0 :            2 of          18
+ P-           0 :            3 of          18
+ P-           0 :            4 of          18
+ P-           0 :            5 of          18
+ P-           0 :            6 of          18
+ P-           0 :            7 of          18
+ P-           0 :            8 of          18
+ P-           0 :            9 of          18
+ P-           0 :           10 of          18
+ P-           0 :           11 of          18
+ P-           0 :           12 of          18
+ P-           0 :           13 of          18
+ P-           0 :           14 of          18
+ P-           0 :           15 of          18
+ P-           0 :           16 of          18
+ P-           0 :           17 of          18
+ P-           0 :           18 of          18
+ calculated the component:           2           2   of dielectric function
+  with broadening:         (0.0000000000000000,2.00000000000000004E-003)
+ and scissors shift:   0.0000000000000000     
+ energy window:   72.884365268307690      eV   2.6784512596475674      Ha
+ optic : Call nlinopt
+ optic : Call linelop
+ optic : Call nonlinopt
+
+================================================================================
+
+ Calculation completed.
+-
+- Proc.   0 individual time (sec): cpu=         86.4  wall=         86.5
+--- !FinalSummary
+program: optic
+version: 9.2.2
+start_datetime: Fri Mar 01 19:14:08 2024
+end_datetime: Fri Mar 01 19:15:34 2024
+overall_cpu_time:          86.4
+overall_wall_time:          86.5
+mpi_procs: 1
+omp_threads: 1
+...

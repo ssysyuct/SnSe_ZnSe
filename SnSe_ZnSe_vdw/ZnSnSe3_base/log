@@ -1,0 +1,1329 @@
+  ABINIT 9.2.2
+  
+ DeprecationWarning: 
+
+     The files file has been deprecated in Abinit9 and will be removed in Abinit10.
+     Use the syntax `abinit t01.abi` where t01.abi is an input with pseudopotenials.
+
+            pseudos = "al.psp8, as.psp8"
+
+
+  Give name for formatted input file: 
+Cs2TiI6.in
+  Give name for formatted output file:
+Cs2TiI6.out
+  Give root name for generic input files:
+Cs2TiI6i
+  Give root name for generic output files:
+Cs2TiI6o
+  Give root name for generic temporary files:
+Cs2TiI6
+
+.Version 9.2.2 of ABINIT 
+.(MPI version, prepared for a x86_64_linux_gnu9.3 computer) 
+
+.Copyright (C) 1998-2020 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Sat 16 Mar 2024.
+- ( at 17h41 )
+  
+- The starting date is more than 3 years after the initial release
+- of this version of ABINIT, namely Nov 2020.
+- This version of ABINIT is not supported anymore.
+- Action: please, switch to a more recent version of ABINIT.
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ === Build Information === 
+  Version       : 9.2.2
+  Build target  : x86_64_linux_gnu9.3
+  Build date    : 20210501
+
+ === Compiler Suite === 
+  C compiler       : gnu9.3
+  C++ compiler     : generic0.0
+  Fortran compiler : gnu9.3
+  CFLAGS           : -g -O2 -mtune=native -march=native
+  CXXFLAGS         : 
+  FCFLAGS          : -g -ffree-line-length-none
+  FC_LDFLAGS       : 
+
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : unknown_unknown
+
+ === Multicore === 
+  Parallel build : yes
+  Parallel I/O   : yes
+  openMP support : 
+  GPU support    : 
+
+ === Connectors / Fallbacks === 
+  LINALG flavor  : netlib
+  FFT flavor     : goedecker
+  HDF5           : yes
+  NetCDF         : yes
+  NetCDF Fortran : yes
+  LibXC          : yes
+  Wannier90      : no
+
+ === Experimental features === 
+  Exports             : 
+  GW double-precision : 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   -O2 -mtune=native -march=native
+
+
+ Optimizations for 43_ptgroups:
+   -O0
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                    CC_GNU                    FC_GNU HAVE_FC_ALLOCATABLE_DT...
+ 
+             HAVE_FC_ASYNC         HAVE_FC_BACKTRACE  HAVE_FC_COMMAND_ARGUMENT
+ 
+      HAVE_FC_COMMAND_LINE        HAVE_FC_CONTIGUOUS           HAVE_FC_CPUTIME
+ 
+              HAVE_FC_EXIT             HAVE_FC_FLUSH             HAVE_FC_GAMMA
+ 
+            HAVE_FC_GETENV   HAVE_FC_IEEE_ARITHMETIC   HAVE_FC_IEEE_EXCEPTIONS
+ 
+          HAVE_FC_INT_QUAD             HAVE_FC_IOMSG     HAVE_FC_ISO_C_BINDING
+ 
+  HAVE_FC_ISO_FORTRAN_2008        HAVE_FC_LONG_LINES        HAVE_FC_MOVE_ALLOC
+ 
+  HAVE_FC_ON_THE_FLY_SHAPE           HAVE_FC_PRIVATE         HAVE_FC_PROTECTED
+ 
+           HAVE_FC_SHIFTLR         HAVE_FC_STREAM_IO            HAVE_FC_SYSTEM
+ 
+          HAVE_FORTRAN2003                 HAVE_HDF5        HAVE_LIBPAW_ABINIT
+ 
+      HAVE_LIBTETRA_ABINIT                HAVE_LIBXC                  HAVE_MPI
+ 
+                 HAVE_MPI2       HAVE_MPI_IALLGATHER       HAVE_MPI_IALLREDUCE
+ 
+        HAVE_MPI_IALLTOALL       HAVE_MPI_IALLTOALLV           HAVE_MPI_IBCAST
+ 
+         HAVE_MPI_IGATHERV        HAVE_MPI_INTEGER16               HAVE_MPI_IO
+ 
+ HAVE_MPI_TYPE_CREATE_S...               HAVE_NETCDF       HAVE_NETCDF_FORTRAN
+ 
+             HAVE_OS_LINUX         HAVE_TIMER_ABINIT                            
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> Cs2TiI6.in
+- output file    -> Cs2TiI6.out
+- root for input  files -> Cs2TiI6i
+- root for output files -> Cs2TiI6o
+
+-instrng: 42 lines of input have been read from file Cs2TiI6.in
+
+
+ Please give name of formatted atomic psp file (and finish with a newline character)
+ For atom type 1, psp file is ../../../Psps_for_tests/ATOMICDATA_NC/Sn.psp8
+
+ Please give name of formatted atomic psp file (and finish with a newline character)
+ For atom type 2, psp file is ../../../Psps_for_tests/ATOMICDATA_NC/Se.psp8
+
+ Please give name of formatted atomic psp file (and finish with a newline character)
+ For atom type 3, psp file is ../../../Psps_for_tests/ATOMICDATA_NC/Zn.psp8
+  read the values zionpsp= 14.0 , pspcod=   8 , lmax=   2
+  read the values zionpsp= 16.0 , pspcod=   8 , lmax=   2
+  read the values zionpsp= 20.0 , pspcod=   8 , lmax=   2
+
+ inpspheads: deduce mpsang = 3, n1xccc = 2501.
+
+======================================================= 
+ invars1m : enter jdtset= 0
+
+ symlatt: the Bravais lattice is tP (primitive tetragonal)
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !WARNING
+src_file: m_ingeo.F90
+src_line: 887
+message: |
+    The tolerance on symmetries =   1.000E-05 is bigger than 1.0e-8.
+    In order to avoid spurious effects, the atomic coordinates have been
+    symmetrized before storing them in the dataset internal variable.
+    So, do not be surprised by the fact that your input variables (xcart, xred, ...)
+    do not correspond to the ones echoed by ABINIT, the latter being used to do the calculations.
+    In order to avoid this symmetrization (e.g. for specific debugging/development), decrease tolsym to 1.0e-8 or lower.
+...
+
+
+ symlatt: the Bravais lattice is tP (primitive tetragonal)
+
+ symlatt: the Bravais lattice is tP (primitive tetragonal)
+ symspgr: spgroup=  99  P4 m m   (=C4v^1)
+ symspgr: optical characteristics = uniaxial
+ Optical axis (in reduced coordinates, real space ) :   0   0   1
+ invars2: take the default value of fband=  1.25000000E-01
+ For input ecut=  2.250000E+01 best grid ngfft=      36      36     180
+       max ecut=  2.547868E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    36   36  180
+  Augmented FFT divisions ...................    37   37  180
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 12212
+
+ Symmetries : space group P4 m m (# 99); Bravais tP (primitive tetrag.)
+
+ getdim_nloc : deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need of the present run
+     intxc =       0    ionmov =       0      iscf =      17    lmnmax =       6
+     lnmax =       6     mgfft =     180  mpssoang =       3    mqgrid =    8458
+     natom =      10  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =       8    n1xccc =    2501    ntypat =       3
+    occopt =       1   xclevel =       2
+-    mband =          83        mffmem =           1         mkmem =           1
+       mpw =       12212          nfft =      233280          nkpt =           6
+================================================================================
+P This job should need less than                      99.542 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :     92.799 Mbytes ; DEN or POT disk file :      1.782 Mbytes.
+================================================================================
+
+ Biggest array : f_fftgr(disk), with     28.4786 MBytes.
+ memana : allocated an array of     28.479 Mbytes, for testing purposes.
+ memana: allocated      99.542Mbytes, for testing purposes. 
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values                                      
+-   iomode0 =  0 , fftalg0 =112 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file              
+-  max_nthreads =    0
+-
+ -outvars: echo values of preprocessed input variables --------
+ 
+ These variables are accessible in NetCDF format (Cs2TiI6o_OUT.nc)
+
+            acell      7.7624316804E+00  7.7624316804E+00  7.7624316804E+00 Bohr
+              amu      1.18710000E+02  7.89600000E+01  6.53900000E+01
+           diemac      1.20000000E+01
+             ecut      2.25000000E+01 Hartree
+-          fftalg         112
+             iscf          17
+              ixc          11
+              kpt      8.33333333E-02  8.33333333E-02  5.00000000E-01
+                       2.50000000E-01  8.33333333E-02  5.00000000E-01
+                       4.16666667E-01  8.33333333E-02  5.00000000E-01
+                       2.50000000E-01  2.50000000E-01  5.00000000E-01
+                       4.16666667E-01  2.50000000E-01  5.00000000E-01
+                       4.16666667E-01  4.16666667E-01  5.00000000E-01
+         kptrlatt        6    0    0      0    6    0      0    0    1
+          kptrlen      4.65745901E+01
+P           mkmem           1
+            natom          10
+            nband          83
+            ngfft          36      36     180
+             nkpt           6
+            nstep         150
+             nsym           8
+           ntypat           3
+              occ      2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  0.000000  0.000000
+           prtcif           1
+            prtwf           0
+            rprim      1.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  1.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  5.1025955632E+00
+           shiftk      5.00000000E-01  5.00000000E-01  5.00000000E-01
+          spgroup          99
+           symrel      1  0  0   0  1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                       0  1  0   1  0  0   0  0  1       0  1  0  -1  0  0   0  0  1
+                       0 -1  0  -1  0  0   0  0  1       0 -1  0   1  0  0   0  0  1
+            tnons      0.0000000  0.0000000  0.0000000     0.0000000 -0.0000000  0.0000000
+                      -0.0000000 -0.0000000  0.0000000    -0.0000000  0.0000000  0.0000000
+                       0.5000000  0.5000000  0.0000000     0.5000000  0.5000000  0.0000000
+                       0.5000000  0.5000000  0.0000000     0.5000000  0.5000000  0.0000000
+           toldfe      1.00000000E-07 Hartree
+            typat      1  1  1  2  2  2  2  2  3  3
+           vdw_xc           5
+              wtk        0.11111    0.22222    0.22222    0.11111    0.22222    0.11111
+           xangst      2.0538509643E+00  0.0000000000E+00  4.6664585258E+00
+                       0.0000000000E+00  2.0538509643E+00  7.4160884693E+00
+                       2.0538509643E+00  0.0000000000E+00  1.0102188830E+01
+                       0.0000000000E+00  2.0538509643E+00  4.6982337974E+00
+                       2.0538509643E+00  0.0000000000E+00  7.3843341577E+00
+                       0.0000000000E+00  2.0538509643E+00  1.0133964101E+01
+                       2.0538509643E+00  0.0000000000E+00  1.3303463595E+01
+                       0.0000000000E+00  2.0538509643E+00  1.6293483109E+01
+                       2.0538509643E+00  2.0538509643E+00  1.4798473352E+01
+                       0.0000000000E+00  0.0000000000E+00  1.4798473352E+01
+            xcart      3.8812158402E+00  0.0000000000E+00  8.8183286243E+00
+                       0.0000000000E+00  3.8812158402E+00  1.4014376184E+01
+                       3.8812158402E+00  0.0000000000E+00  1.9090370231E+01
+                       0.0000000000E+00  3.8812158402E+00  8.8783751853E+00
+                       3.8812158402E+00  0.0000000000E+00  1.3954369232E+01
+                       0.0000000000E+00  3.8812158402E+00  1.9150416792E+01
+                       3.8812158402E+00  0.0000000000E+00  2.5139902814E+01
+                       0.0000000000E+00  3.8812158402E+00  3.0790220828E+01
+                       3.8812158402E+00  3.8812158402E+00  2.7965061821E+01
+                       0.0000000000E+00  0.0000000000E+00  2.7965061821E+01
+             xred      5.0000000000E-01  0.0000000000E+00  2.2263700000E-01
+                       0.0000000000E+00  5.0000000000E-01  3.5382200000E-01
+                       5.0000000000E-01  0.0000000000E+00  4.8197600000E-01
+                       0.0000000000E+00  5.0000000000E-01  2.2415300000E-01
+                       5.0000000000E-01  0.0000000000E+00  3.5230700000E-01
+                       0.0000000000E+00  5.0000000000E-01  4.8349200000E-01
+                       5.0000000000E-01  0.0000000000E+00  6.3470900000E-01
+                       0.0000000000E+00  5.0000000000E-01  7.7736300000E-01
+                       5.0000000000E-01  5.0000000000E-01  7.0603600000E-01
+                       0.0000000000E+00  0.0000000000E+00  7.0603600000E-01
+            znucl       50.00000   34.00000   30.00000
+
+================================================================================
+
+ chkinp: Checking input parameters for consistency.
+ DATA TYPE INFORMATION: 
+ REAL:      Data type name: REAL(DP) 
+            Kind value:      8
+            Precision:      15
+            Smallest nonnegligible quantity relative to 1: 0.22204460E-015
+            Smallest positive number:                      0.22250739E-307
+            Largest representable number:                  0.17976931E+309
+ INTEGER:   Data type name: INTEGER(default) 
+            Kind value: 4
+            Bit size:   32
+            Largest representable number: 2147483647
+ LOGICAL:   Data type name: LOGICAL 
+            Kind value: 4
+ CHARACTER: Data type name: CHARACTER             Kind value: 1
+
+  ==== OpenMP parallelism is OFF ====
+ 
+  ==== Using MPI-2 specifications ==== 
+  MPI-IO support is ON
+  xmpi_tag_ub ................   2147483647
+  xmpi_bsize_ch ..............            1
+  xmpi_bsize_int .............            4
+  xmpi_bsize_sp ..............            4
+  xmpi_bsize_dp ..............            8
+  xmpi_bsize_spc .............            8
+  xmpi_bsize_dpc .............           16
+  xmpio_bsize_frm ............            4
+  xmpi_address_kind ..........            8
+  xmpi_offset_kind ...........            8
+  MPI_WTICK ..................    1.0000000000000001E-009
+
+================================================================================
+== DATASET  1 ==================================================================
+-   mpi_nproc: 6, omp_nthreads: -1 (-1 if OMP is not activated)
+
+
+--- !COMMENT
+src_file: m_xgScalapack.F90
+src_line: 236
+message: |
+    xgScalapack in auto mode
+...
+
+
+ getdim_nloc : deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+ Exchange-correlation functional for the present dataset will be:
+  GGA: Perdew-Burke-Ernzerhof functional - ixc=11
+ Citation for XC functional:
+  J.P.Perdew, K.Burke, M.Ernzerhof, PRL 77, 3865 (1996)
+
+ Unit cell volume ucvol=  2.3866268E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  36  36 180
+         ecut(hartree)=     22.500   => boxcut(ratio)=   2.12827
+- pspini: atom type   1  psp file is ../../../Psps_for_tests/ATOMICDATA_NC/Sn.psp8
+- pspatm: opening atomic psp file    ../../../Psps_for_tests/ATOMICDATA_NC/Sn.psp8
+- Sn    ONCVPSP  r_core=  2.27  2.62  1.86
+- 50.00000  14.00000    150810                znucl, zion, pspdat
+    8   11    2    4       600   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    6.50000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2     2
+     extension_switch     1
+  valence charge integrates to:    13.912521222389802     
+  pspatm : epsatm=   32.65190642
+         --- l  ekb(1:nproj) -->
+             0    5.462393    0.682281
+             1    4.443814    0.825686
+             2   -5.382195   -1.704077
+ pspatm: atomic psp has been read  and splines computed
+
+- pspini: atom type   2  psp file is ../../../Psps_for_tests/ATOMICDATA_NC/Se.psp8
+- pspatm: opening atomic psp file    ../../../Psps_for_tests/ATOMICDATA_NC/Se.psp8
+- Se    ONCVPSP  r_core=  1.82  1.50  1.91
+- 34.00000  16.00000    150729                znucl, zion, pspdat
+    8   11    2    4       600   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    5.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2     2
+     extension_switch     1
+  valence charge integrates to:    15.981819523532332     
+  pspatm : epsatm=   29.53325930
+         --- l  ekb(1:nproj) -->
+             0    8.612261    0.939919
+             1    6.984962    1.281898
+             2   -9.322521   -3.856218
+ pspatm: atomic psp has been read  and splines computed
+
+- pspini: atom type   3  psp file is ../../../Psps_for_tests/ATOMICDATA_NC/Zn.psp8
+- pspatm: opening atomic psp file    ../../../Psps_for_tests/ATOMICDATA_NC/Zn.psp8
+- Zn    ONCVPSP  r_core=  1.36  1.66  1.85
+- 30.00000  20.00000    161102                znucl, zion, pspdat
+    8   11    2    4       600   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    2.50000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2     2
+     extension_switch     1
+  valence charge integrates to:    19.977025053306086     
+  pspatm : epsatm=   26.67245340
+         --- l  ekb(1:nproj) -->
+             0    2.404235   -1.533451
+             1   -4.677427   -1.530630
+             2   -7.000316   -2.622858
+ pspatm: atomic psp has been read  and splines computed
+
+   4.84326415E+04                                ecore*ucvol(ha*bohr**3)
+ ==== Info on pseudopotentials ====
+  Norm-conserving pseudopotentials
+  Number of pseudopotentials ..    3
+  Number of types of atoms   ..    3
+  Scalar calculation (no spin-orbit term)
+  Nonlocal part applied using Legendre polynomials
+  Max number of non-local projectors over l and type   2
+  Highest angular momentum +1 .......   3
+  Max number of (l,n)   components ..   6
+  Max number of (l,m,n) components ..   6
+
+ Pseudo-Core Charge Info: 
+   Number of radial points for pseudo-core charge .. 2501
+   XC core-correction treatment (optnlxccc) ........    1
+   Radius for pseudo-core charge for each type ..... 
+
+  - Atom type    1 has pseudo-core radius ..  5.9900
+  - Atom type    2 has pseudo-core radius ..  5.9900
+  - Atom type    3 has pseudo-core radius ..  5.9900
+
+ Info on the Q-grid used for form factors in spline form: 
+   Number of q-points for radial functions ffspl ..   8458
+   Number of q-points for vlspl ...................   8458
+   vloc is computed in Reciprocal Space
+   model core charge treated in real-space
+
+  XC functional for type 1 is 11
+  Pseudo valence available: yes
+  XC functional for type 2 is 11
+  Pseudo valence available: yes
+  XC functional for type 3 is 11
+  Pseudo valence available: yes
+
+ wfconv:    83 bands initialized randomly with npw= 12212, for ikpt=     1
+_setup2: Arith. and geom. avg. npw (full set) are   12172.889   12172.878
+ initro: for itypat=  1, take pseudo charge density from pp file
+ initro: for itypat=  2, take pseudo charge density from pp file
+ initro: for itypat=  3, take pseudo charge density from pp file
+
+================================================================================
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  36  36 180
+         ecut(hartree)=     22.500   => boxcut(ratio)=   2.12827
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+  --------------------------------------------------------------
+  Van der Waals DFT-D2 semi-empirical dispersion potential added
+      with following parameters:
+      Specie  C6 (J.nm^6.mol^-1)  R0 (Ang)
+      ------------------------------------
+         Sn           38.71         1.804
+         Se           12.64         1.771
+         Zn           10.80         1.562
+
+      Scaling factor   =   0.75
+      Damping parameter=  20.00
+      Cut-off radius   = 130.92 bohr
+
+      Number of pairs contributing =   216689
+      DFT-D2 energy contribution   =   -9.85610E-02 Ha
+  --------------------------------------------------------------
+
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+--- !WARNING
+src_file: m_drivexc.F90
+src_line: 707
+message: |
+    Density went too small (lower than xc_denpos) at 17706 points
+    and was set to xc_denpos =   1.00E-14. Lowest was  -0.66E-03.
+    Likely due to too low boxcut or too low ecut for pseudopotential core charge.
+...
+
+
+ ITER STEP NUMBER     1
+ vtorho: nnsclo_now = 2, note that nnsclo, dbl_nnsclo, istep= 0 0 1
+ Total charge density [el/Bohr^3]
+      Maximum=    3.2715E+00  at reduced coord.    0.5000    0.5000    0.7167
+      Minimum=    3.5946E-03  at reduced coord.    0.1389    0.0000    0.9500
+   Integrated=    1.6200E+02
+ ETOT  1  -1236.2580852373    -1.236E+03 7.534E-01 1.863E+03
+ scprqt: <Vxc>= -2.8188153E-01 hartree
+
+ Simple mixing update:
+  residual square of the potential:    1212.5629458430269
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+--- !WARNING
+src_file: m_drivexc.F90
+src_line: 707
+message: |
+    Density went too small (lower than xc_denpos) at 7572 points
+    and was set to xc_denpos =   1.00E-14. Lowest was  -0.24E-03.
+    Likely due to too low boxcut or too low ecut for pseudopotential core charge.
+...
+
+ scfcv_core: previous iteration took 25.05 [s]
+
+ ITER STEP NUMBER     2
+ vtorho: nnsclo_now = 2, note that nnsclo, dbl_nnsclo, istep= 0 0 2
+ Total charge density [el/Bohr^3]
+      Maximum=    5.8718E+00  at reduced coord.    0.5000    0.5278    0.6944
+      Minimum=    1.2838E-04  at reduced coord.    0.0000    0.0000    0.0556
+   Integrated=    1.6200E+02
+ ETOT  2  -1326.3348612698    -9.008E+01 4.139E-01 5.321E+03
+ scprqt: <Vxc>= -3.0627439E-01 hartree
+
+ Pulay update with  1 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.393      0.607
+
+--- !WARNING
+src_file: m_drivexc.F90
+src_line: 707
+message: |
+    Density went too small (lower than xc_denpos) at 5430 points
+    and was set to xc_denpos =   1.00E-14. Lowest was  -0.21E-03.
+    Likely due to too low boxcut or too low ecut for pseudopotential core charge.
+...
+
+ scfcv_core: previous iteration took 24.16 [s]
+
+ ITER STEP NUMBER     3
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 3
+ Total charge density [el/Bohr^3]
+      Maximum=    4.1952E+00  at reduced coord.    0.0000    0.9444    0.7111
+      Minimum=    6.0986E-04  at reduced coord.    0.1111    0.0000    0.9556
+   Integrated=    1.6200E+02
+ ETOT  3  -1222.6244828743     1.037E+02 6.517E+00 1.294E+03
+ scprqt: <Vxc>= -3.0623918E-01 hartree
+
+ Pulay update with  2 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.241      0.309      0.450
+
+--- !WARNING
+src_file: m_drivexc.F90
+src_line: 707
+message: |
+    Density went too small (lower than xc_denpos) at 2066 points
+    and was set to xc_denpos =   1.00E-14. Lowest was  -0.87E-04.
+    Likely due to too low boxcut or too low ecut for pseudopotential core charge.
+...
+
+ scfcv_core: previous iteration took 12.33 [s]
+
+ ITER STEP NUMBER     4
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 4
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0885E+00  at reduced coord.    0.0000    0.9444    0.7000
+      Minimum=    1.1972E-04  at reduced coord.    0.0556    0.0278    0.9556
+   Integrated=    1.6200E+02
+ ETOT  4  -1255.3508862393    -3.273E+01 1.001E+00 7.069E+02
+ scprqt: <Vxc>= -3.1146311E-01 hartree
+
+ Pulay update with  3 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.435     -0.177E-02  0.231      0.336
+ scfcv_core: previous iteration took 12.27 [s]
+
+ ITER STEP NUMBER     5
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 5
+ Total charge density [el/Bohr^3]
+      Maximum=    4.3911E+00  at reduced coord.    0.5000    0.5556    0.7000
+      Minimum=    7.7136E-05  at reduced coord.    0.2500    0.2500    0.9944
+   Integrated=    1.6200E+02
+ ETOT  5  -1249.3417288089     6.009E+00 1.796E+00 3.408E+02
+ scprqt: <Vxc>= -3.1140481E-01 hartree
+
+ Pulay update with  4 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.383      0.155      0.523E-01  0.114      0.297
+ scfcv_core: previous iteration took 12.39 [s]
+
+ ITER STEP NUMBER     6
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 6
+ Total charge density [el/Bohr^3]
+      Maximum=    4.5357E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    3.2659E-05  at reduced coord.    0.5000    0.0000    0.9444
+   Integrated=    1.6200E+02
+ ETOT  6  -1256.6970154835    -7.355E+00 3.935E-01 4.243E+02
+ scprqt: <Vxc>= -3.0883738E-01 hartree
+
+ Pulay update with  5 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.158      0.282      0.990E-01  0.566E-01  0.991E-01
+ scfcv_core: previous iteration took 12.19 [s]
+
+ ITER STEP NUMBER     7
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 7
+ Total charge density [el/Bohr^3]
+      Maximum=    4.4963E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    9.3538E-06  at reduced coord.    0.0000    0.5000    0.0056
+   Integrated=    1.6200E+02
+ ETOT  7  -1257.5783384526    -8.813E-01 4.387E-02 3.633E+02
+ scprqt: <Vxc>= -3.0759135E-01 hartree
+
+ Pulay update with  6 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.512     -0.301      0.270      0.739E-01  0.534E-01
+ scfcv_core: previous iteration took 12.21 [s]
+
+ ITER STEP NUMBER     8
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 8
+ Total charge density [el/Bohr^3]
+      Maximum=    4.4717E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    7.7771E-06  at reduced coord.    0.1944    0.3056    0.0000
+   Integrated=    1.6200E+02
+ ETOT  8  -1257.1532087136     4.251E-01 3.581E-02 3.187E+02
+ scprqt: <Vxc>= -3.0658216E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   2.22     -0.442      -1.22      0.145     -0.257E-01
+ scfcv_core: previous iteration took 12.17 [s]
+
+ ITER STEP NUMBER     9
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 9
+ Total charge density [el/Bohr^3]
+      Maximum=    4.3674E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    7.4230E-06  at reduced coord.    0.1944    0.3056    0.0000
+   Integrated=    1.6200E+02
+ ETOT  9  -1255.5150885865     1.638E+00 6.147E-03 1.377E+02
+ scprqt: <Vxc>= -3.0124546E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.85       2.72     -0.432      -2.42     -0.291
+
+--- !WARNING
+src_file: m_drivexc.F90
+src_line: 707
+message: |
+    Density went too small (lower than xc_denpos) at 5292 points
+    and was set to xc_denpos =   1.00E-14. Lowest was  -0.26E-02.
+    Likely due to too low boxcut or too low ecut for pseudopotential core charge.
+...
+
+ scfcv_core: previous iteration took 12.09 [s]
+
+ ITER STEP NUMBER    10
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 10
+ Total charge density [el/Bohr^3]
+      Maximum=    3.7248E+00  at reduced coord.    0.5000    0.5556    0.7000
+      Minimum=    1.5436E-05  at reduced coord.    0.5000    0.0000    0.9778
+   Integrated=    1.6200E+02
+ ETOT 10  -1256.1767703237    -6.617E-01 7.029E-02 4.779E+02
+ scprqt: <Vxc>= -2.6967350E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.563     -0.442     -0.504       1.51     -0.698E-01
+ scfcv_core: previous iteration took 12.17 [s]
+
+ ITER STEP NUMBER    11
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 11
+ Total charge density [el/Bohr^3]
+      Maximum=    4.2002E+00  at reduced coord.    0.9722    0.9444    0.7111
+      Minimum=    7.8742E-06  at reduced coord.    0.3333    0.1667    0.0000
+   Integrated=    1.6200E+02
+ ETOT 11  -1254.1304127301     2.046E+00 6.987E-02 2.220E+01
+ scprqt: <Vxc>= -2.9345081E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.617      0.403     -0.536      -1.45       1.29
+ scfcv_core: previous iteration took 11.96 [s]
+
+ ITER STEP NUMBER    12
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 12
+ Total charge density [el/Bohr^3]
+      Maximum=    4.1751E+00  at reduced coord.    0.9722    0.9444    0.7111
+      Minimum=    7.4680E-06  at reduced coord.    0.3333    0.1667    0.0000
+   Integrated=    1.6200E+02
+ ETOT 12  -1254.1680947037    -3.768E-02 2.697E-03 1.775E+01
+ scprqt: <Vxc>= -2.9303769E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.740     -0.135      0.322     -0.266     -0.540
+ scfcv_core: previous iteration took 12.32 [s]
+
+ ITER STEP NUMBER    13
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 13
+ Total charge density [el/Bohr^3]
+      Maximum=    4.1287E+00  at reduced coord.    0.9722    0.9444    0.7111
+      Minimum=    7.2917E-06  at reduced coord.    0.3333    0.1667    0.0000
+   Integrated=    1.6200E+02
+ ETOT 13  -1254.0595710928     1.085E-01 4.589E-03 4.145E+00
+ scprqt: <Vxc>= -2.8979182E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.29      0.193     -0.556      0.814E-01 -0.603E-01
+ scfcv_core: previous iteration took 12.22 [s]
+
+ ITER STEP NUMBER    14
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 14
+ Total charge density [el/Bohr^3]
+      Maximum=    4.1062E+00  at reduced coord.    0.9722    0.9444    0.7111
+      Minimum=    7.6989E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 14  -1254.0287298532     3.084E-02 2.598E-03 1.298E+00
+ scprqt: <Vxc>= -2.8699764E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.734      0.468E-01  0.229     -0.198      0.970E-01
+ scfcv_core: previous iteration took 12.21 [s]
+
+ ITER STEP NUMBER    15
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 15
+ Total charge density [el/Bohr^3]
+      Maximum=    4.1068E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    7.8109E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 15  -1254.0244038466     4.326E-03 2.512E-03 5.597E-01
+ scprqt: <Vxc>= -2.8646948E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.912      0.141     -0.731E-01  0.688E-01 -0.946E-01
+ scfcv_core: previous iteration took 12.19 [s]
+
+ ITER STEP NUMBER    16
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 16
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0997E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    7.9780E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 16  -1254.0199340841     4.470E-03 4.742E-04 1.209E-01
+ scprqt: <Vxc>= -2.8491168E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.992      0.109     -0.423E-01 -0.113E-01  0.109E-01
+ scfcv_core: previous iteration took 12.22 [s]
+
+ ITER STEP NUMBER    17
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 17
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0908E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.2262E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 17  -1254.0179460478     1.988E-03 5.432E-04 9.111E-03
+ scprqt: <Vxc>= -2.8339421E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.768      0.262     -0.257E-01 -0.462E-02 -0.171E-01
+ scfcv_core: previous iteration took 12.22 [s]
+
+ ITER STEP NUMBER    18
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 18
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0917E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.1942E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 18  -1254.0176526087     2.934E-04 5.101E-04 3.489E-03
+ scprqt: <Vxc>= -2.8286105E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.794      0.207      0.158E-01 -0.418E-02 -0.142E-02
+ scfcv_core: previous iteration took 12.24 [s]
+
+ ITER STEP NUMBER    19
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 19
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0917E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.3070E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 19  -1254.0174699250     1.827E-04 5.846E-04 1.871E-03
+ scprqt: <Vxc>= -2.8217744E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.10     -0.112E-01 -0.754E-01 -0.385E-01  0.325E-01
+ scfcv_core: previous iteration took 12.18 [s]
+
+ ITER STEP NUMBER    20
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 20
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0917E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.3460E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 20  -1254.0173877400     8.218E-05 3.435E-04 1.012E-03
+ scprqt: <Vxc>= -2.8138078E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.27     -0.168     -0.380E-01 -0.411E-01 -0.293E-01
+ scfcv_core: previous iteration took 12.27 [s]
+
+ ITER STEP NUMBER    21
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 21
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.4100E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 21  -1254.0173782742     9.466E-06 2.794E-04 4.816E-04
+ scprqt: <Vxc>= -2.8042622E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.26      0.302E-01 -0.300      0.298E-01 -0.152E-01
+ scfcv_core: previous iteration took 12.18 [s]
+
+ ITER STEP NUMBER    22
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 22
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.4179E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 22  -1254.0174218715    -4.360E-05 1.474E-04 1.714E-04
+ scprqt: <Vxc>= -2.7935149E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.45     -0.132     -0.386      0.724E-01  0.152E-01
+ scfcv_core: previous iteration took 12.19 [s]
+
+ ITER STEP NUMBER    23
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 23
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.3931E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 23  -1254.0174872772    -6.541E-05 1.102E-04 3.172E-05
+ scprqt: <Vxc>= -2.7798618E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.37     -0.422E-01 -0.494      0.372E-01  0.151
+ scfcv_core: previous iteration took 12.19 [s]
+
+ ITER STEP NUMBER    24
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 24
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.3083E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 24  -1254.0175158019    -2.852E-05 6.158E-05 3.031E-06
+ scprqt: <Vxc>= -2.7701392E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.03      0.217     -0.274     -0.760E-01  0.117
+ scfcv_core: previous iteration took 12.13 [s]
+
+ ITER STEP NUMBER    25
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 25
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.2977E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 25  -1254.0175183440    -2.542E-06 4.966E-05 2.990E-07
+ scprqt: <Vxc>= -2.7672549E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.01      0.148     -0.149     -0.516E-01  0.399E-01
+ scfcv_core: previous iteration took 11.93 [s]
+
+ ITER STEP NUMBER    26
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 26
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.2964E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 26  -1254.0175184704    -1.264E-07 2.964E-05 4.095E-08
+ scprqt: <Vxc>= -2.7666794E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.926      0.141     -0.493E-01 -0.517E-01  0.307E-01
+ scfcv_core: previous iteration took 12.15 [s]
+
+ ITER STEP NUMBER    27
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 27
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.2967E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 27  -1254.0175184770    -6.632E-09 2.458E-05 1.093E-08
+ scprqt: <Vxc>= -2.7665941E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.03      0.767E-01 -0.102     -0.946E-02 -0.459E-02
+ scfcv_core: previous iteration took 12.31 [s]
+
+ ITER STEP NUMBER    28
+ vtorho: nnsclo_now = 1, note that nnsclo, dbl_nnsclo, istep= 0 0 28
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+      Minimum=    8.2967E-06  at reduced coord.    0.3333    0.0833    0.9944
+   Integrated=    1.6200E+02
+ ETOT 28  -1254.0175184798    -2.777E-09 1.505E-05 3.167E-09
+ scprqt: <Vxc>= -2.7665259E-01 hartree
+
+ At SCF step   28, etot is converged : 
+  for the second time, diff in etot=  2.777E-09 < toldfe=  1.000E-07
+
+ Cartesian components of stress tensor (hartree/bohr^3)
+  sigma(1 1)=  1.44764501E-02  sigma(3 2)=  0.00000000E+00
+  sigma(2 2)=  1.44764501E-02  sigma(3 1)=  0.00000000E+00
+  sigma(3 3)=  1.44062620E-02  sigma(2 1)=  0.00000000E+00
+
+
+   fftdatar_write: About to write data to: Cs2TiI6o_DEN with iomode: IO_MODE_FORTRAN
+ IO operation completed. cpu:  0.00 [s] , wall:  0.00 [s] <<< TIME
+- Creating netcdf file WITHOUT MPI-IO support: Cs2TiI6o_GSR.nc
+ Integrated electronic density in atomic spheres:
+ ------------------------------------------------
+ Atom  Sphere_radius  Integrated_density
+    1        2.00000         10.54217837
+    2        2.00000         10.57246700
+    3        2.00000         10.54768746
+    4        2.00000         13.30158335
+    5        2.00000         13.31860181
+    6        2.00000         13.27811710
+    7        2.00000         13.26326374
+    8        2.00000         13.25812155
+    9        2.00000         18.10154423
+   10        2.00000         18.10154423
+================================================================================
+
+ ----iterations are completed or convergence reached----
+
+
+ === Gap info ===
+  >>>> For spin  1
+   Minimum direct gap =   0.7044 [eV], located at k-point      :   0.4167  0.0833  0.5000
+   Fundamental gap    =   0.3519 [eV], Top of valence bands at :   0.4167  0.0833  0.5000
+                                       Bottom of conduction at :   0.0833  0.0833  0.5000
+ Mean square residual over all n,k,spin=   34.630E-09; max=  15.047E-06
+   0.0833  0.0833  0.5000    1  1.74977E-10 kpt; spin; max resid(k); each band:
+   1.56E-14  1.64E-14  9.75E-15  9.79E-15  2.25E-14  2.21E-14  9.34E-15  9.41E-15
+   1.57E-12  1.59E-12  6.76E-13  1.39E-12  6.20E-13  5.81E-13  2.84E-13  1.39E-12
+   1.54E-12  1.57E-12  1.69E-13  1.08E-13  1.37E-13  4.03E-14  4.34E-14  9.20E-14
+   2.34E-13  9.77E-14  3.02E-13  3.07E-13  3.09E-13  3.20E-13  2.56E-13  1.19E-13
+   1.41E-13  2.39E-14  6.14E-14  9.80E-15  9.47E-15  1.93E-15  8.14E-16  3.46E-14
+   3.28E-14  3.01E-15  2.14E-15  2.99E-15  1.34E-14  1.66E-14  1.26E-14  1.26E-14
+   6.47E-13  3.44E-13  7.87E-13  2.63E-13  1.62E-13  1.37E-14  7.09E-14  2.15E-14
+   2.38E-14  1.11E-13  2.09E-14  4.57E-14  3.18E-14  5.80E-15  3.33E-15  2.09E-13
+   3.17E-13  7.42E-13  4.27E-13  8.76E-13  7.00E-13  6.80E-13  3.55E-13  2.39E-13
+   9.60E-14  1.01E-12  1.72E-13  1.88E-12  9.45E-13  2.84E-13  2.30E-13  2.79E-13
+   1.04E-12  1.98E-13  1.75E-10
+   0.2500  0.0833  0.5000    1  1.63233E-09 kpt; spin; max resid(k); each band:
+   1.53E-14  1.61E-14  9.72E-15  9.42E-15  2.25E-14  9.37E-15  2.24E-14  9.61E-15
+   4.39E-13  1.45E-12  1.18E-12  9.77E-13  2.02E-12  1.76E-12  1.31E-12  8.43E-13
+   9.08E-13  1.21E-12  1.51E-13  1.16E-13  1.68E-13  5.69E-14  6.63E-14  5.59E-14
+   2.30E-13  8.18E-14  2.06E-13  2.71E-13  1.82E-13  7.73E-14  2.04E-13  2.24E-13
+   1.74E-13  2.36E-14  5.79E-14  1.73E-14  1.16E-14  5.71E-15  3.94E-15  3.21E-14
+   3.23E-14  4.81E-15  4.20E-15  1.22E-14  2.37E-15  1.43E-14  1.34E-14  1.14E-14
+   4.48E-13  1.39E-13  5.69E-13  1.93E-13  1.51E-13  1.79E-14  3.27E-14  4.25E-14
+   5.92E-14  5.66E-14  3.35E-14  1.14E-14  6.29E-14  8.73E-14  8.63E-15  2.30E-13
+   1.53E-13  7.57E-13  1.06E-12  1.83E-13  5.90E-13  7.84E-14  2.31E-13  8.21E-13
+   1.24E-12  1.34E-12  6.68E-13  3.51E-13  1.15E-12  5.96E-13  9.02E-14  4.45E-13
+   6.06E-13  2.38E-10  1.63E-09
+   0.4167  0.0833  0.5000    1  6.88103E-08 kpt; spin; max resid(k); each band:
+   1.50E-14  1.49E-14  9.47E-15  9.60E-15  9.50E-15  9.43E-15  2.21E-14  2.22E-14
+   8.93E-13  1.05E-12  1.12E-12  8.09E-13  1.02E-12  9.16E-13  6.98E-13  4.25E-13
+   9.34E-13  1.43E-12  5.27E-14  1.95E-13  5.28E-14  6.02E-14  4.70E-14  4.33E-14
+   2.38E-13  2.48E-13  2.69E-13  1.95E-13  2.97E-13  5.93E-14  1.56E-13  1.39E-13
+   1.92E-13  2.49E-14  5.11E-14  6.12E-14  2.17E-14  3.71E-15  1.31E-14  3.90E-14
+   3.69E-14  4.24E-15  3.11E-15  3.25E-15  7.68E-15  1.55E-14  1.41E-14  1.15E-14
+   2.59E-13  3.58E-13  8.26E-14  4.78E-14  8.13E-14  2.15E-14  5.52E-14  2.45E-14
+   2.89E-14  9.51E-14  3.74E-14  5.02E-14  2.20E-14  4.25E-14  1.69E-13  3.50E-13
+   9.82E-14  3.39E-13  2.73E-13  1.47E-13  7.32E-13  5.30E-13  9.05E-13  4.45E-13
+   1.13E-12  1.26E-12  2.63E-13  2.71E-13  2.17E-13  1.49E-13  2.25E-13  1.66E-12
+   1.14E-11  4.00E-09  6.88E-08
+   0.2500  0.2500  0.5000    1  1.50471E-05 kpt; spin; max resid(k); each band:
+   1.50E-14  1.46E-14  8.40E-15  8.52E-15  9.33E-15  2.23E-14  9.42E-15  2.23E-14
+   1.20E-12  5.28E-13  8.41E-13  1.85E-13  5.07E-13  5.16E-13  1.71E-13  7.18E-13
+   6.56E-13  9.39E-13  1.44E-13  4.75E-14  9.71E-14  3.11E-14  2.14E-14  1.29E-13
+   2.04E-13  2.31E-13  2.39E-13  1.46E-14  2.26E-13  1.31E-14  1.68E-13  2.23E-13
+   2.05E-13  2.52E-14  6.83E-14  1.25E-14  1.79E-14  1.56E-14  2.53E-14  1.47E-14
+   3.94E-14  4.40E-14  1.59E-15  5.17E-15  2.20E-14  8.79E-16  1.15E-14  1.79E-14
+   3.37E-13  1.03E-13  3.96E-13  1.57E-13  1.44E-13  1.98E-14  6.56E-14  3.27E-14
+   2.24E-14  3.65E-14  1.48E-14  1.73E-14  3.19E-14  2.02E-14  1.46E-13  2.24E-13
+   1.55E-13  5.93E-13  7.17E-13  1.88E-13  1.69E-13  7.96E-13  9.91E-13  1.04E-13
+   5.06E-13  5.97E-13  7.81E-13  1.41E-12  1.26E-12  1.93E-13  3.09E-13  4.95E-13
+   3.20E-13  4.56E-07  1.50E-05
+   0.4167  0.2500  0.5000    1  1.50607E-06 kpt; spin; max resid(k); each band:
+   1.49E-14  1.61E-14  9.59E-15  9.73E-15  9.22E-15  2.25E-14  2.21E-14  9.40E-15
+   1.40E-12  9.06E-13  8.84E-13  1.09E-12  4.36E-13  8.50E-13  7.85E-13  2.88E-13
+   9.25E-13  1.39E-12  1.25E-13  1.45E-13  1.64E-13  6.64E-14  2.79E-14  1.23E-13
+   1.10E-13  2.52E-13  1.61E-13  2.06E-13  1.50E-13  2.16E-13  2.02E-13  1.97E-13
+   1.66E-13  3.26E-14  2.17E-14  1.68E-14  1.47E-14  7.71E-14  1.75E-14  3.30E-14
+   2.88E-14  3.78E-14  1.41E-15  6.18E-15  1.09E-14  1.40E-14  1.17E-14  1.26E-14
+   2.23E-13  3.21E-13  5.78E-14  3.66E-14  5.77E-14  1.84E-14  1.71E-14  1.88E-14
+   3.10E-14  6.48E-14  6.04E-14  2.32E-14  2.54E-14  3.35E-14  9.19E-14  2.80E-13
+   6.78E-14  3.83E-13  2.74E-13  1.40E-13  9.16E-14  1.13E-12  8.22E-13  1.62E-13
+   1.33E-12  3.73E-13  1.13E-12  1.09E-12  9.93E-13  2.36E-13  2.83E-13  5.45E-13
+   2.16E-13  1.41E-11  1.51E-06
+   0.4167  0.4167  0.5000    1  1.61012E-07 kpt; spin; max resid(k); each band:
+   1.49E-14  1.62E-14  9.79E-15  9.19E-15  9.59E-15  9.36E-15  2.25E-14  2.26E-14
+   1.07E-12  1.39E-12  3.26E-13  4.72E-14  6.28E-13  1.57E-14  5.21E-13  1.06E-12
+   9.70E-13  7.28E-13  4.39E-14  8.20E-14  1.55E-13  9.44E-14  3.10E-15  1.45E-13
+   6.91E-14  2.93E-13  2.66E-13  2.35E-13  6.89E-14  2.57E-13  2.57E-13  2.62E-13
+   2.42E-13  3.58E-14  5.02E-15  1.62E-14  2.39E-14  7.98E-14  1.34E-14  3.83E-14
+   1.66E-15  3.77E-14  1.47E-15  7.82E-15  4.59E-16  2.26E-14  1.13E-14  1.16E-14
+   9.40E-14  1.50E-13  4.83E-14  4.18E-14  5.07E-14  1.55E-14  1.24E-14  1.60E-14
+   1.32E-14  7.20E-14  2.20E-14  1.50E-14  5.20E-14  3.14E-14  9.07E-14  2.44E-13
+   4.38E-14  5.11E-13  3.30E-13  4.90E-13  4.53E-13  2.33E-13  1.22E-13  1.23E-12
+   1.08E-12  9.26E-13  7.77E-13  1.03E-12  7.28E-13  6.20E-13  1.42E-13  9.37E-13
+   1.39E-13  6.80E-12  1.61E-07
+ prteigrs : about to open file Cs2TiI6o_EIG
+ Fermi (or HOMO) energy (hartree) =   0.08893   Average Vxc (hartree)=  -0.27665
+ Eigenvalues (hartree) for nkpt=   6  k points:
+ kpt#   1, nband= 83, wtk=  0.11111, kpt=  0.0833  0.0833  0.5000 (reduced coord)
+  -4.78656   -4.78655   -3.02394   -3.02374   -3.02183   -3.02171   -3.02155   -3.02141
+  -1.73773   -1.73750   -1.73690   -1.73662   -1.73608   -1.73189   -1.73188   -1.72963
+  -1.72843   -1.72776   -1.72135   -1.72020   -1.71995   -1.71880   -1.71838   -1.69864
+  -1.69851   -1.69794   -1.69517   -1.69503   -1.69469   -1.69364   -1.69236   -1.69117
+  -1.69071   -0.71337   -0.71185   -0.71104   -0.71097   -0.71076   -0.71049   -0.70964
+  -0.70959   -0.70944   -0.70921   -0.70387   -0.70376   -0.70372   -0.70190   -0.70184
+  -0.45930   -0.45554   -0.43366   -0.41669   -0.39686   -0.24975   -0.24794   -0.24694
+  -0.24650   -0.24600   -0.23470   -0.23419   -0.23312   -0.22901   -0.22664   -0.16930
+  -0.16721   -0.13729   -0.10973   -0.09016   -0.07180   -0.06856   -0.06416   -0.04254
+  -0.03390   -0.01142   -0.00867   -0.00752    0.00417    0.00567    0.01400    0.03321
+   0.04494    0.10186    0.11959
+ kpt#   2, nband= 83, wtk=  0.22222, kpt=  0.2500  0.0833  0.5000 (reduced coord)
+  -4.78655   -4.78654   -3.02319   -3.02189   -3.02151   -3.02134   -3.02118   -3.02086
+  -1.73618   -1.73541   -1.73505   -1.73290   -1.73164   -1.73115   -1.72924   -1.72798
+  -1.72702   -1.72596   -1.72023   -1.71855   -1.71787   -1.71567   -1.71445   -1.69756
+  -1.69565   -1.69461   -1.69394   -1.69365   -1.69278   -1.69135   -1.69053   -1.68896
+  -1.68845   -0.71279   -0.71137   -0.71100   -0.71075   -0.71016   -0.70999   -0.70959
+  -0.70930   -0.70886   -0.70870   -0.70381   -0.70336   -0.70269   -0.70192   -0.70161
+  -0.45245   -0.44581   -0.43282   -0.40959   -0.39642   -0.24873   -0.24408   -0.24372
+  -0.24327   -0.24223   -0.23587   -0.23206   -0.23166   -0.22957   -0.22853   -0.19445
+  -0.19288   -0.15348   -0.13608   -0.11736   -0.08542   -0.06679   -0.05196   -0.03304
+  -0.02418   -0.01405   -0.00752   -0.00367    0.00136    0.00196    0.03998    0.05769
+   0.07364    0.12191    0.13063
+ kpt#   3, nband= 83, wtk=  0.22222, kpt=  0.4167  0.0833  0.5000 (reduced coord)
+  -4.78655   -4.78655   -3.02298   -3.02236   -3.02204   -3.02147   -3.02144   -3.02125
+  -1.73609   -1.73545   -1.73499   -1.73461   -1.73336   -1.73118   -1.72965   -1.72902
+  -1.72858   -1.72708   -1.71931   -1.71898   -1.71838   -1.71823   -1.71589   -1.69812
+  -1.69554   -1.69519   -1.69517   -1.69444   -1.69397   -1.69150   -1.69110   -1.69079
+  -1.69010   -0.71253   -0.71120   -0.71104   -0.71086   -0.71059   -0.71008   -0.70971
+  -0.70944   -0.70932   -0.70873   -0.70388   -0.70336   -0.70290   -0.70208   -0.70176
+  -0.44310   -0.43435   -0.43168   -0.40221   -0.39896   -0.24560   -0.24167   -0.24078
+  -0.23955   -0.23884   -0.23720   -0.23565   -0.23519   -0.23374   -0.23037   -0.21966
+  -0.20957   -0.18728   -0.14909   -0.14880   -0.06701   -0.03989   -0.03660   -0.03010
+  -0.02936   -0.01746   -0.01013   -0.00456   -0.00350    0.01362    0.06581    0.07470
+   0.08893    0.11482    0.11953
+ kpt#   4, nband= 83, wtk=  0.11111, kpt=  0.2500  0.2500  0.5000 (reduced coord)
+  -4.78655   -4.78654   -3.02247   -3.02227   -3.02183   -3.02172   -3.02098   -3.02084
+  -1.73514   -1.73484   -1.73366   -1.73339   -1.73186   -1.73040   -1.72906   -1.72853
+  -1.72818   -1.72743   -1.71926   -1.71843   -1.71733   -1.71706   -1.71411   -1.69742
+  -1.69525   -1.69519   -1.69420   -1.69414   -1.69310   -1.69081   -1.69043   -1.68994
+  -1.68920   -0.71258   -0.71110   -0.71099   -0.71087   -0.71076   -0.70972   -0.70947
+  -0.70942   -0.70934   -0.70834   -0.70409   -0.70302   -0.70278   -0.70185   -0.70174
+  -0.44650   -0.43674   -0.43133   -0.40276   -0.39421   -0.25165   -0.24272   -0.24110
+  -0.24099   -0.23883   -0.23677   -0.23329   -0.23232   -0.22991   -0.22946   -0.19733
+  -0.18988   -0.15920   -0.13779   -0.11428   -0.10708   -0.09101   -0.07115   -0.06877
+  -0.03890   -0.02863   -0.02776   -0.01907   -0.00813   -0.00125    0.04656    0.06134
+   0.07597    0.14039    0.14448
+ kpt#   5, nband= 83, wtk=  0.22222, kpt=  0.4167  0.2500  0.5000 (reduced coord)
+  -4.78656   -4.78655   -3.02354   -3.02268   -3.02204   -3.02165   -3.02147   -3.02145
+  -1.73663   -1.73594   -1.73573   -1.73522   -1.73406   -1.73092   -1.73002   -1.72968
+  -1.72958   -1.72861   -1.72024   -1.71961   -1.71922   -1.71783   -1.71652   -1.69860
+  -1.69672   -1.69655   -1.69561   -1.69536   -1.69364   -1.69310   -1.69146   -1.69102
+  -1.69066   -0.71252   -0.71130   -0.71126   -0.71109   -0.71100   -0.70990   -0.70987
+  -0.70975   -0.70962   -0.70857   -0.70448   -0.70308   -0.70290   -0.70218   -0.70196
+  -0.43878   -0.43138   -0.42469   -0.39617   -0.39298   -0.25036   -0.24349   -0.24127
+  -0.24012   -0.23839   -0.23519   -0.23494   -0.23414   -0.23222   -0.23010   -0.20671
+  -0.19401   -0.17452   -0.14402   -0.13939   -0.09933   -0.07470   -0.06683   -0.05802
+  -0.05692   -0.04478   -0.03829   -0.03490   -0.02897   -0.02150    0.01671    0.02036
+   0.06455    0.13297    0.16277
+ kpt#   6, nband= 83, wtk=  0.11111, kpt=  0.4167  0.4167  0.5000 (reduced coord)
+  -4.78656   -4.78655   -3.02311   -3.02290   -3.02238   -3.02186   -3.02172   -3.02107
+  -1.73641   -1.73637   -1.73500   -1.73473   -1.73425   -1.73128   -1.73107   -1.73061
+  -1.72922   -1.72912   -1.72002   -1.71905   -1.71903   -1.71818   -1.71733   -1.69897
+  -1.69779   -1.69721   -1.69709   -1.69554   -1.69402   -1.69346   -1.69086   -1.69005
+  -1.68958   -0.71229   -0.71173   -0.71139   -0.71131   -0.71075   -0.71030   -0.70980
+  -0.70970   -0.70967   -0.70841   -0.70504   -0.70284   -0.70275   -0.70222   -0.70209
+  -0.43400   -0.42846   -0.41678   -0.38979   -0.38638   -0.25234   -0.24878   -0.23984
+  -0.23959   -0.23627   -0.23328   -0.23223   -0.23221   -0.23179   -0.23161   -0.18870
+  -0.17155   -0.15337   -0.14166   -0.13837   -0.13418   -0.10279   -0.09549   -0.08357
+  -0.07593   -0.06412   -0.06281   -0.05582   -0.04771   -0.03602   -0.03458   -0.00374
+   0.06337    0.13844    0.16526
+ Total charge density [el/Bohr^3]
+      Maximum=    4.0916E+00  at reduced coord.    0.9444    0.9722    0.7000
+ Next maximum=    4.0916E+00  at reduced coord.    0.0556    0.9722    0.7000
+      Minimum=    8.2967E-06  at reduced coord.    0.3333    0.0833    0.9944
+ Next minimum=    8.2967E-06  at reduced coord.    0.6667    0.0833    0.9944
+   Integrated=    1.6200E+02
+
+ Cartesian components of stress tensor (hartree/bohr^3)
+  sigma(1 1)=  1.44764501E-02  sigma(3 2)=  0.00000000E+00
+  sigma(2 2)=  1.44764501E-02  sigma(3 1)=  0.00000000E+00
+  sigma(3 3)=  1.44062620E-02  sigma(2 1)=  0.00000000E+00
+
+-Cartesian components of stress tensor (GPa)         [Pressure= -4.2522E+02 GPa]
+- sigma(1 1)=  4.25911796E+02  sigma(3 2)=  0.00000000E+00
+- sigma(2 2)=  4.25911796E+02  sigma(3 1)=  0.00000000E+00
+- sigma(3 3)=  4.23846789E+02  sigma(2 1)=  0.00000000E+00
+
+== END DATASET(S) ==============================================================
+================================================================================
+  
+ -outvars: echo values of variables after computation  --------
+ 
+ These variables are accessible in NetCDF format (Cs2TiI6o_OUT.nc)
+
+            acell      7.7624316804E+00  7.7624316804E+00  7.7624316804E+00 Bohr
+              amu      1.18710000E+02  7.89600000E+01  6.53900000E+01
+           diemac      1.20000000E+01
+             ecut      2.25000000E+01 Hartree
+           etotal     -1.2540175185E+03
+            fcart     -0.0000000000E+00 -0.0000000000E+00 -1.3758741129E-02
+                      -0.0000000000E+00 -0.0000000000E+00 -2.1619887162E-03
+                      -0.0000000000E+00 -0.0000000000E+00  1.2140876193E-02
+                      -0.0000000000E+00 -0.0000000000E+00 -1.6603512931E-02
+                      -0.0000000000E+00 -0.0000000000E+00  4.1088240596E-04
+                      -0.0000000000E+00 -0.0000000000E+00  2.0902367185E-02
+                      -0.0000000000E+00 -0.0000000000E+00  1.1485894252E-02
+                      -0.0000000000E+00 -0.0000000000E+00 -8.7967558384E-03
+                      -0.0000000000E+00 -0.0000000000E+00 -1.8095107107E-03
+                      -0.0000000000E+00 -0.0000000000E+00 -1.8095107107E-03
+-          fftalg         112
+             iscf          17
+              ixc          11
+              kpt      8.33333333E-02  8.33333333E-02  5.00000000E-01
+                       2.50000000E-01  8.33333333E-02  5.00000000E-01
+                       4.16666667E-01  8.33333333E-02  5.00000000E-01
+                       2.50000000E-01  2.50000000E-01  5.00000000E-01
+                       4.16666667E-01  2.50000000E-01  5.00000000E-01
+                       4.16666667E-01  4.16666667E-01  5.00000000E-01
+         kptrlatt        6    0    0      0    6    0      0    0    1
+          kptrlen      4.65745901E+01
+P           mkmem           1
+            natom          10
+            nband          83
+            ngfft          36      36     180
+             nkpt           6
+            nstep         150
+             nsym           8
+           ntypat           3
+              occ      2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  0.000000  0.000000
+           prtcif           1
+            prtwf           0
+            rprim      1.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  1.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  5.1025955632E+00
+           shiftk      5.00000000E-01  5.00000000E-01  5.00000000E-01
+          spgroup          99
+           strten      1.4476450148E-02  1.4476450148E-02  1.4406261955E-02
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+           symrel      1  0  0   0  1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                       0  1  0   1  0  0   0  0  1       0  1  0  -1  0  0   0  0  1
+                       0 -1  0  -1  0  0   0  0  1       0 -1  0   1  0  0   0  0  1
+            tnons      0.0000000  0.0000000  0.0000000     0.0000000 -0.0000000  0.0000000
+                      -0.0000000 -0.0000000  0.0000000    -0.0000000  0.0000000  0.0000000
+                       0.5000000  0.5000000  0.0000000     0.5000000  0.5000000  0.0000000
+                       0.5000000  0.5000000  0.0000000     0.5000000  0.5000000  0.0000000
+           toldfe      1.00000000E-07 Hartree
+            typat      1  1  1  2  2  2  2  2  3  3
+           vdw_xc           5
+              wtk        0.11111    0.22222    0.22222    0.11111    0.22222    0.11111
+           xangst      2.0538509643E+00  0.0000000000E+00  4.6664585258E+00
+                       0.0000000000E+00  2.0538509643E+00  7.4160884693E+00
+                       2.0538509643E+00  0.0000000000E+00  1.0102188830E+01
+                       0.0000000000E+00  2.0538509643E+00  4.6982337974E+00
+                       2.0538509643E+00  0.0000000000E+00  7.3843341577E+00
+                       0.0000000000E+00  2.0538509643E+00  1.0133964101E+01
+                       2.0538509643E+00  0.0000000000E+00  1.3303463595E+01
+                       0.0000000000E+00  2.0538509643E+00  1.6293483109E+01
+                       2.0538509643E+00  2.0538509643E+00  1.4798473352E+01
+                       0.0000000000E+00  0.0000000000E+00  1.4798473352E+01
+            xcart      3.8812158402E+00  0.0000000000E+00  8.8183286243E+00
+                       0.0000000000E+00  3.8812158402E+00  1.4014376184E+01
+                       3.8812158402E+00  0.0000000000E+00  1.9090370231E+01
+                       0.0000000000E+00  3.8812158402E+00  8.8783751853E+00
+                       3.8812158402E+00  0.0000000000E+00  1.3954369232E+01
+                       0.0000000000E+00  3.8812158402E+00  1.9150416792E+01
+                       3.8812158402E+00  0.0000000000E+00  2.5139902814E+01
+                       0.0000000000E+00  3.8812158402E+00  3.0790220828E+01
+                       3.8812158402E+00  3.8812158402E+00  2.7965061821E+01
+                       0.0000000000E+00  0.0000000000E+00  2.7965061821E+01
+             xred      5.0000000000E-01  0.0000000000E+00  2.2263700000E-01
+                       0.0000000000E+00  5.0000000000E-01  3.5382200000E-01
+                       5.0000000000E-01  0.0000000000E+00  4.8197600000E-01
+                       0.0000000000E+00  5.0000000000E-01  2.2415300000E-01
+                       5.0000000000E-01  0.0000000000E+00  3.5230700000E-01
+                       0.0000000000E+00  5.0000000000E-01  4.8349200000E-01
+                       5.0000000000E-01  0.0000000000E+00  6.3470900000E-01
+                       0.0000000000E+00  5.0000000000E-01  7.7736300000E-01
+                       5.0000000000E-01  5.0000000000E-01  7.0603600000E-01
+                       0.0000000000E+00  0.0000000000E+00  7.0603600000E-01
+            znucl       50.00000   34.00000   30.00000
+
+================================================================================
+  
+
+================================================================================
+
+ Suggested references for the acknowledgment of ABINIT usage.
+
+ The users of ABINIT have little formal obligations with respect to the ABINIT group
+ (those specified in the GNU General Public License, http://www.gnu.org/copyleft/gpl.txt).
+ However, it is common practice in the scientific literature,
+ to acknowledge the efforts of people that have made the research possible.
+ In this spirit, please find below suggested citations of work written by ABINIT developers,
+ corresponding to implementations inside of ABINIT that you have used in the present run.
+ Note also that it will be of great value to readers of publications presenting these results,
+ to read papers enabling them to understand the theoretical formalism and details
+ of the ABINIT implementation.
+ For information on why they are suggested, see also https://docs.abinit.org/theory/acknowledgments.
+-
+- [1] The Abinit project: Impact, environment and recent developments.
+- Computer Phys. Comm. 248, 107042 (2020).
+- X.Gonze, B. Amadon, G. Antonius, F.Arnardi, L.Baguet, J.-M.Beuken,
+- J.Bieder, F.Bottin, J.Bouchet, E.Bousquet, N.Brouwer, F.Bruneval,
+- G.Brunin, T.Cavignac, J.-B. Charraud, Wei Chen, M.Cote, S.Cottenier,
+- J.Denier, G.Geneste, Ph.Ghosez, M.Giantomassi, Y.Gillet, O.Gingras,
+- D.R.Hamann, G.Hautier, Xu He, N.Helbig, N.Holzwarth, Y.Jia, F.Jollet,
+- W.Lafargue-Dit-Hauret, K.Lejaeghere, M.A.L.Marques, A.Martin, C.Martins,
+- H.P.C. Miranda, F.Naccarato, K. Persson, G.Petretto, V.Planes, Y.Pouillon,
+- S.Prokhorenko, F.Ricci, G.-M.Rignanese, A.H.Romero, M.M.Schmitt, M.Torrent,
+- M.J.van Setten, B.Van Troeye, M.J.Verstraete, G.Zerah and J.W.Zwanzig
+- Comment: the fifth generic paper describing the ABINIT project.
+- Note that a version of this paper, that is not formatted for Computer Phys. Comm. 
+- is available at https://www.abinit.org/sites/default/files/ABINIT20.pdf .
+- The licence allows the authors to put it on the Web.
+- DOI and bibtex: see https://docs.abinit.org/theory/bibliography/#gonze2020
+-
+- [2] Optimized norm-conserving Vanderbilt pseudopotentials.
+- D.R. Hamann, Phys. Rev. B 88, 085117 (2013).
+- Comment: Some pseudopotential generated using the ONCVPSP code were used.
+- DOI and bibtex: see https://docs.abinit.org/theory/bibliography/#hamann2013
+-
+- [3] ABINIT: Overview, and focus on selected capabilities
+- J. Chem. Phys. 152, 124102 (2020).
+- A. Romero, D.C. Allan, B. Amadon, G. Antonius, T. Applencourt, L.Baguet,
+- J.Bieder, F.Bottin, J.Bouchet, E.Bousquet, F.Bruneval,
+- G.Brunin, D.Caliste, M.Cote,
+- J.Denier, C. Dreyer, Ph.Ghosez, M.Giantomassi, Y.Gillet, O.Gingras,
+- D.R.Hamann, G.Hautier, F.Jollet, G. Jomard,
+- A.Martin, 
+- H.P.C. Miranda, F.Naccarato, G.Petretto, N.A. Pike, V.Planes,
+- S.Prokhorenko, T. Rangel, F.Ricci, G.-M.Rignanese, M.Royo, M.Stengel, M.Torrent,
+- M.J.van Setten, B.Van Troeye, M.J.Verstraete, J.Wiktor, J.W.Zwanziger, and X.Gonze.
+- Comment: a global overview of ABINIT, with focus on selected capabilities .
+- Note that a version of this paper, that is not formatted for J. Chem. Phys 
+- is available at https://www.abinit.org/sites/default/files/ABINIT20_JPC.pdf .
+- The licence allows the authors to put it on the Web.
+- DOI and bibtex: see https://docs.abinit.org/theory/bibliography/#romero2020
+-
+- [4] Recent developments in the ABINIT software package.
+- Computer Phys. Comm. 205, 106 (2016).
+- X.Gonze, F.Jollet, F.Abreu Araujo, D.Adams, B.Amadon, T.Applencourt,
+- C.Audouze, J.-M.Beuken, J.Bieder, A.Bokhanchuk, E.Bousquet, F.Bruneval
+- D.Caliste, M.Cote, F.Dahm, F.Da Pieve, M.Delaveau, M.Di Gennaro,
+- B.Dorado, C.Espejo, G.Geneste, L.Genovese, A.Gerossier, M.Giantomassi,
+- Y.Gillet, D.R.Hamann, L.He, G.Jomard, J.Laflamme Janssen, S.Le Roux,
+- A.Levitt, A.Lherbier, F.Liu, I.Lukacevic, A.Martin, C.Martins,
+- M.J.T.Oliveira, S.Ponce, Y.Pouillon, T.Rangel, G.-M.Rignanese,
+- A.H.Romero, B.Rousseau, O.Rubel, A.A.Shukri, M.Stankovski, M.Torrent,
+- M.J.Van Setten, B.Van Troeye, M.J.Verstraete, D.Waroquier, J.Wiktor,
+- B.Xu, A.Zhou, J.W.Zwanziger.
+- Comment: the fourth generic paper describing the ABINIT project.
+- Note that a version of this paper, that is not formatted for Computer Phys. Comm. 
+- is available at https://www.abinit.org/sites/default/files/ABINIT16.pdf .
+- The licence allows the authors to put it on the Web.
+- DOI and bibtex: see https://docs.abinit.org/theory/bibliography/#gonze2016
+-
+- And optionally:
+-
+- [5] ABINIT: First-principles approach of materials and nanosystem properties.
+- Computer Phys. Comm. 180, 2582-2615 (2009).
+- X. Gonze, B. Amadon, P.-M. Anglade, J.-M. Beuken, F. Bottin, P. Boulanger, F. Bruneval,
+- D. Caliste, R. Caracas, M. Cote, T. Deutsch, L. Genovese, Ph. Ghosez, M. Giantomassi
+- S. Goedecker, D.R. Hamann, P. Hermet, F. Jollet, G. Jomard, S. Leroux, M. Mancini, S. Mazevet,
+- M.J.T. Oliveira, G. Onida, Y. Pouillon, T. Rangel, G.-M. Rignanese, D. Sangalli, R. Shaltaf,
+- M. Torrent, M.J. Verstraete, G. Zerah, J.W. Zwanziger
+- Comment: the third generic paper describing the ABINIT project.
+- Note that a version of this paper, that is not formatted for Computer Phys. Comm. 
+- is available at https://www.abinit.org/sites/default/files/ABINIT_CPC_v10.pdf .
+- The licence allows the authors to put it on the Web.
+- DOI and bibtex: see https://docs.abinit.org/theory/bibliography/#gonze2009
+ Proc.   0 individual time (sec): cpu=        369.9  wall=        369.9
+
+ Calculation completed.
+.Delivered   0 WARNINGs and   0 COMMENTs to log file.
+
+--- !FinalSummary
+program: abinit
+version: 9.2.2
+start_datetime: Sat Mar 16 17:41:42 2024
+end_datetime: Sat Mar 16 17:47:52 2024
+overall_cpu_time:        2219.5
+overall_wall_time:        2219.5
+exit_requested_by_user: no 
+timelimit: 0
+pseudos: 
+    Sn  : c918e999fc214fef37654f9ff7d5f03d
+    Se  : f801923bd422df98a30264e8ccc86374
+    Zn  : 80c9b4d1484b64588a366a4998a7c40d
+usepaw: 0
+mpi_procs: 6
+omp_threads: 1
+num_warnings: 0
+num_comments: 0
+...
